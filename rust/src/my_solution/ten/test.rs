@@ -47,3 +47,15 @@ fn test_length_of_longest_substring() {
         3
     );
 }
+#[test]
+fn test_longest_palindrome() {
+    use ten::four;
+    assert_eq!(
+        four::longest_palindrome(String::from("cabaderta")),
+        String::from("aba")
+    );
+    assert_eq!(
+        four::longest_palindrome(String::from("aa")),
+        String::from("aa")
+    );
+}
