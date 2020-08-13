@@ -1,3 +1,6 @@
+use rust_leetcode::my_solution::ten::three;
+
 fn main() {
-    println!("hello");
+    let str = String::from("pwwkew");
+    assert_eq!(three::length_of_longest_substring(str), 3);
 }

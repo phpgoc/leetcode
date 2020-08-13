@@ -1,16 +1,15 @@
-use crate::my_solution::ten::two::add_two_numbers;
-
+use crate::my_solution::ten;
 #[test]
 fn test_two_sum() {
     let nums = vec![2, 3, 5, 7];
     let targat = 9;
-    let answer = crate::my_solution::ten::one::two_sum(nums, targat);
+    let answer = ten::one::two_sum(nums, targat);
     assert_eq!(answer, vec![0, 3])
 }
 
 #[test]
 fn test_add_two_numbers() {
-    use crate::my_solution::ten::two;
+    use ten::two;
 
     let l1 = Some(Box::new(two::ListNode {
         val: 2,
@@ -33,5 +32,18 @@ fn test_add_two_numbers() {
             next: Some(Box::new(two::ListNode { val: 8, next: None })),
         })),
     }));
-    assert_eq!(add_two_numbers(l1, l2), result);
+    assert_eq!(two::add_two_numbers(l1, l2), result);
+}
+#[test]
+fn test_length_of_longest_substring() {
+    use ten::three;
+    assert_eq!(
+        three::length_of_longest_substring(String::from("pwwkew")),
+        3
+    );
+    assert_eq!(three::length_of_longest_substring(String::from("bbbbb")), 1);
+    assert_eq!(
+        three::length_of_longest_substring(String::from("abcabcbb")),
+        3
+    );
 }
