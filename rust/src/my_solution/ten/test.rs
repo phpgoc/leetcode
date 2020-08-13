@@ -59,3 +59,12 @@ fn test_longest_palindrome() {
         String::from("aa")
     );
 }
+
+#[test]
+fn test_convert() {
+    use ten::six;
+    assert_eq!(
+        six::convert(String::from("LEETCODEISHIRING"), 3),
+        String::from("LCIRETOESIIGEDHN")
+    );
+}
