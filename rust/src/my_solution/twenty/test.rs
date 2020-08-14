@@ -60,3 +60,16 @@ fn test_longest_common_prefix() {
         String::from("a")
     );
 }
+
+#[test]
+fn test_three_sum() {
+    use twenty::fifteen;
+    assert_eq!(
+        fifteen::three_sum(vec![0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
+        vec![vec![0, 0, 0]]
+    );
+    assert_eq!(
+        fifteen::three_sum(vec![-1, 0, 1, 2, -1, -4]),
+        vec![vec![-1, -1, 2], vec![-1, 0, 1]]
+    );
+}
