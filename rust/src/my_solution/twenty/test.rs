@@ -22,3 +22,41 @@ fn test_roman_to_int() {
     assert_eq!(thirteen::roman_to_int(String::from("LVIII")), 58);
     assert_eq!(thirteen::roman_to_int(String::from("MCMXCIV")), 1994);
 }
+
+#[test]
+fn test_longest_common_prefix() {
+    use twenty::fourteen;
+    assert_eq!(
+        fourteen::longest_common_prefix(
+            vec!["flower", "flow", "flight"]
+                .into_iter()
+                .map(String::from)
+                .collect::<Vec<_>>()
+        ),
+        String::from("fl")
+    );
+    assert_eq!(
+        fourteen::longest_common_prefix(
+            vec!["a"].into_iter().map(String::from).collect::<Vec<_>>()
+        ),
+        String::from("a")
+    );
+    assert_eq!(
+        fourteen::longest_common_prefix(
+            vec!["aa", "ab"]
+                .into_iter()
+                .map(String::from)
+                .collect::<Vec<_>>()
+        ),
+        String::from("a")
+    );
+    assert_eq!(
+        fourteen::longest_common_prefix(
+            vec!["aa", "a"]
+                .into_iter()
+                .map(String::from)
+                .collect::<Vec<_>>()
+        ),
+        String::from("a")
+    );
+}
