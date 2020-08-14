@@ -74,3 +74,13 @@ fn test_reverse() {
     use ten::seven;
     assert_eq!(seven::reverse(123), 321);
 }
+#[test]
+fn test_my_atoi() {
+    use ten::eight;
+    assert_eq!(eight::my_atoi(String::from("  42")), 42);
+    assert_eq!(eight::my_atoi(String::from("  ")), 0);
+    assert_eq!(
+        eight::my_atoi(String::from("  20000000000000000000")),
+        2147483647
+    );
+}
