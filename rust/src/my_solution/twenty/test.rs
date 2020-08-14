@@ -73,3 +73,9 @@ fn test_three_sum() {
         vec![vec![-1, -1, 2], vec![-1, 0, 1]]
     );
 }
+
+#[test]
+fn test_three_sum_closest() {
+    use twenty::sixteen;
+    assert_eq!(sixteen::three_sum_closest(vec![-1, 2, 1, -4], 1), 2);
+}
