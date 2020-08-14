@@ -84,3 +84,10 @@ fn test_my_atoi() {
         2147483647
     );
 }
+
+#[test]
+fn test_is_palindrome() {
+    use ten::nine;
+    assert_eq!(nine::is_palindrome(123), false);
+    assert_eq!(nine::is_palindrome(121), true);
+}
