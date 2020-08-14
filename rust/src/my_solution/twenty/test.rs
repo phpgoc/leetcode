@@ -14,3 +14,11 @@ fn test_int_to_roman() {
     assert_eq!(twelve::int_to_roman(58), String::from("LVIII"));
     assert_eq!(twelve::int_to_roman(1994), String::from("MCMXCIV"));
 }
+
+#[test]
+fn test_roman_to_int() {
+    use twenty::thirteen;
+    assert_eq!(thirteen::roman_to_int(String::from("III")), 3);
+    assert_eq!(thirteen::roman_to_int(String::from("LVIII")), 58);
+    assert_eq!(thirteen::roman_to_int(String::from("MCMXCIV")), 1994);
+}
