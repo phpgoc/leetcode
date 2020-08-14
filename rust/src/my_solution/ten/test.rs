@@ -68,3 +68,9 @@ fn test_convert() {
         String::from("LCIRETOESIIGEDHN")
     );
 }
+
+#[test]
+fn test_reverse() {
+    use ten::seven;
+    assert_eq!(seven::reverse(123), 321);
+}
