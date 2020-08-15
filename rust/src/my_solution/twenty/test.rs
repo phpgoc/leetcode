@@ -98,3 +98,17 @@ fn test_four_sum() {
         assert!(result.contains(&i));
     }
 }
+
+#[test]
+fn test_remove_nth_from_end() {
+    use twenty::nineteen;
+    let l1 = Some(Box::new(nineteen::ListNode {
+        val: 2,
+        next: Some(Box::new(nineteen::ListNode {
+            val: 4,
+            next: Some(Box::new(nineteen::ListNode { val: 3, next: None })),
+        })),
+    }));
+    let l2 = l1.clone();
+    assert_eq!(nineteen::remove_nth_from_end(l1, 0), l2);
+}
