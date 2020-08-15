@@ -112,3 +112,9 @@ fn test_remove_nth_from_end() {
     let l2 = l1.clone();
     assert_eq!(nineteen::remove_nth_from_end(l1, 0), l2);
 }
+
+#[test]
+fn test_is_valid() {
+    assert_eq!(twenty::twenty::is_valid(String::from("()[]{}")), true);
+    assert_eq!(twenty::twenty::is_valid(String::from("(")), false);
+}
