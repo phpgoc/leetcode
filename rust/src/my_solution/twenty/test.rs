@@ -88,3 +88,13 @@ fn test_letter_combinations() {
         vec!["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
     );
 }
+
+#[test]
+fn test_four_sum() {
+    use twenty::eighteen;
+    let result = eighteen::four_sum(vec![1, 0, -1, 0, -2, 2], 0);
+
+    for i in vec![vec![-1, 0, 0, 1], vec![-2, -1, 1, 2], vec![-2, 0, 0, 2]] {
+        assert!(result.contains(&i));
+    }
+}

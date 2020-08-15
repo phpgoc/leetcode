@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 pub fn letter_combinations(digits: String) -> Vec<String> {
     let chars: Vec<char> = digits.chars().collect();
     if chars.len() == 0 {
