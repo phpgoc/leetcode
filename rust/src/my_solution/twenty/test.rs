@@ -79,3 +79,12 @@ fn test_three_sum_closest() {
     use twenty::sixteen;
     assert_eq!(sixteen::three_sum_closest(vec![-1, 2, 1, -4], 1), 2);
 }
+
+#[test]
+fn test_letter_combinations() {
+    use twenty::seventeen;
+    assert_eq!(
+        seventeen::letter_combinations(String::from("23")),
+        vec!["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
+    );
+}
