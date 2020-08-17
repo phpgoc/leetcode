@@ -35,3 +35,29 @@ fn test_generate_parenthesis() {
         assert!(result.contains(&i));
     }
 }
+
+#[test]
+fn test_merge_k_lists() {
+    use thirty::twenty_three;
+    let l1 = Some(Box::new(twenty_three::ListNode {
+        val: 1,
+        next: Some(Box::new(twenty_three::ListNode { val: 3, next: None })),
+    }));
+    let l2 = Some(Box::new(twenty_three::ListNode {
+        val: 2,
+        next: Some(Box::new(twenty_three::ListNode { val: 4, next: None })),
+    }));
+    let expect = Some(Box::new(twenty_three::ListNode {
+        val: 1,
+        next: Some(Box::new(twenty_three::ListNode {
+            val: 2,
+            next: Some(Box::new(twenty_three::ListNode {
+                val: 3,
+                next: Some(Box::new(twenty_three::ListNode { val: 4, next: None })),
+            })),
+        })),
+    }));
+    let input = vec![l1, l2];
+    let result = twenty_three::merge_k_lists(input);
+    assert_eq!(expect, result);
+}
