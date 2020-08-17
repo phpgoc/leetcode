@@ -16,7 +16,7 @@ pub fn longest_common_prefix(strs: Vec<String>) -> String {
         return max_string.clone();
     }
     let mut min_len = min_string.len();
-    let mut max_len = max_string.len();
+    let max_len = max_string.len();
 
     min_len = min_len.min(max_len);
     for i in 0..min_len {

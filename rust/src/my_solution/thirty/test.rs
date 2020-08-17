@@ -1,5 +1,4 @@
 use crate::my_solution::thirty;
-
 #[test]
 fn test_merge_two_lists() {
     use thirty::twenty_one;
@@ -22,4 +21,17 @@ fn test_merge_two_lists() {
         })),
     }));
     assert_eq!(twenty_one::merge_two_lists(l1, l2), result);
+}
+
+#[test]
+fn test_generate_parenthesis() {
+    use thirty::twenty_two;
+    let result = twenty_two::generate_parenthesis(3);
+    let expect = vec!["((()))", "(()())", "(())()", "()(())", "()()()"]
+        .into_iter()
+        .map(String::from)
+        .collect::<Vec<_>>();
+    for i in expect {
+        assert!(result.contains(&i));
+    }
 }

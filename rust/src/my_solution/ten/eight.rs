@@ -5,7 +5,6 @@ pub fn my_atoi(str: String) -> i32 {
     }
     let mut char_src: Vec<char> = str_trim.chars().collect();
     let mut char_dst = vec![];
-    let mut started_with_legal = false;
     let mut minus = false;
     if char_src[0] == '+' {
         char_src.remove(0);
@@ -27,7 +26,7 @@ pub fn my_atoi(str: String) -> i32 {
     let return_str: String = char_dst.into_iter().collect();
     let r: i32 = match return_str.parse() {
         Ok(T) => T,
-        Err(E) => {
+        Err(_) => {
             if minus {
                 std::i32::MIN
             } else {

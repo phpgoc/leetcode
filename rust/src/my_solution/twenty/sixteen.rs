@@ -1,5 +1,3 @@
-use std::cmp::min;
-
 pub fn three_sum_closest(nums: Vec<i32>, target: i32) -> i32 {
     let mut nums = nums;
     nums.sort();
