@@ -25,7 +25,7 @@ fn generate_parenthesis_recursion(n: i32) -> Vec<String> {
         for l in generate_parenthesis_recursion(i) {
             for r in generate_parenthesis_recursion(n - i - 1) {
                 let str = format!("({}){}", l, r);
-                result.push(str.clone());
+                result.push(str);
                 //                println!("{}", str);
             }
         }
