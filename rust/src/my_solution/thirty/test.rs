@@ -89,3 +89,11 @@ fn test_remove_duplicates() {
     assert_eq!(twenty_six::remove_duplicates(input.as_mut()), 2);
     assert_eq!(input, vec![1, 2]);
 }
+
+#[test]
+fn test_remove_element() {
+    use thirty::twenty_seven;
+    let mut input = vec![1, 1, 2];
+    assert_eq!(twenty_seven::remove_element(input.as_mut(), 2), 2);
+    assert_eq!(input, vec![1, 1]);
+}
