@@ -41,3 +41,12 @@ fn test_longest_valid_parentheses() {
         6
     );
 }
+
+#[test]
+fn test_search() {
+    use forty::thirty_three;
+    assert_eq!(thirty_three::search(vec![4, 5, 6, 7, 0, 1, 2], 0), 4);
+    assert_eq!(thirty_three::search(vec![1], 0), -1);
+    assert_eq!(thirty_three::search(vec![1, 3], 0), -1);
+    assert_eq!(thirty_three::search(vec![1, 3], 3), 1);
+}
