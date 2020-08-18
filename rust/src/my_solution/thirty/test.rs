@@ -97,3 +97,28 @@ fn test_remove_element() {
     assert_eq!(twenty_seven::remove_element(input.as_mut(), 2), 2);
     assert_eq!(input, vec![1, 1]);
 }
+
+#[test]
+fn test_str_str() {
+    use thirty::twenty_eight;
+    //    assert_eq!(
+    //        twenty_eight::str_str(String::from("hello"), String::from("ll")),
+    //        2
+    //    );
+    //    assert_eq!(
+    //        twenty_eight::str_str(String::from(""), String::from("a")),
+    //        -1
+    //    );
+    //    assert_eq!(
+    //        twenty_eight::str_str(String::from("mississippi"), String::from("issi")),
+    //        1
+    //    );
+    assert_eq!(
+        twenty_eight::str_str(String::from("mississippi"), String::from("pi")),
+        9
+    );
+    assert_eq!(
+        twenty_eight::str_str(String::from("aaaaa"), String::from("bba")),
+        -1
+    );
+}
