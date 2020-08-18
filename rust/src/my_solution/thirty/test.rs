@@ -81,3 +81,11 @@ fn test_swap_pairs() {
     }));
     assert_eq!(twenty_four::swap_pairs(input), expect);
 }
+
+#[test]
+fn test_remove_duplicates() {
+    use thirty::twenty_six;
+    let mut input = vec![1, 1, 2];
+    assert_eq!(twenty_six::remove_duplicates(input.as_mut()), 2);
+    assert_eq!(input, vec![1, 2]);
+}
