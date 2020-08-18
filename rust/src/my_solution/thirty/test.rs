@@ -61,3 +61,23 @@ fn test_merge_k_lists() {
     let result = twenty_three::merge_k_lists(input);
     assert_eq!(expect, result);
 }
+
+#[test]
+fn test_swap_pairs() {
+    use thirty::twenty_four;
+    let expect = Some(Box::new(twenty_four::ListNode {
+        val: 1,
+        next: Some(Box::new(twenty_four::ListNode {
+            val: 2,
+            next: Some(Box::new(twenty_four::ListNode { val: 3, next: None })),
+        })),
+    }));
+    let input = Some(Box::new(twenty_four::ListNode {
+        val: 2,
+        next: Some(Box::new(twenty_four::ListNode {
+            val: 1,
+            next: Some(Box::new(twenty_four::ListNode { val: 3, next: None })),
+        })),
+    }));
+    assert_eq!(twenty_four::swap_pairs(input), expect);
+}
