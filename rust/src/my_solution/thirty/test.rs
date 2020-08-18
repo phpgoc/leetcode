@@ -122,3 +122,13 @@ fn test_str_str() {
         -1
     );
 }
+
+#[test]
+fn test_divide() {
+    use thirty::twenty_nine;
+    assert_eq!(twenty_nine::divide(10, 3), 3);
+    assert_eq!(twenty_nine::divide(-10, 3), -3);
+    assert_eq!(twenty_nine::divide(-2147483648, -1), 2147483647);
+    assert_eq!(twenty_nine::divide(-2147483648, 1), -2147483648);
+    assert_eq!(twenty_nine::divide(2147483647, 2), 1073741823);
+}
