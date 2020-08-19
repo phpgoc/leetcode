@@ -106,3 +106,9 @@ fn test_is_valid_sudoku() {
         false
     );
 }
+
+#[test]
+fn test_count_and_say() {
+    use forty::thirty_eight;
+    assert_eq!(thirty_eight::count_and_say(5), String::from("111221"));
+}
