@@ -53,16 +53,22 @@ fn test_search() {
 
 #[test]
 fn test_search_range() {
-    use forty::thrity_four;
-    //    assert_eq!(
-    //        thrity_four::search_range(vec![5, 7, 7, 8, 8, 10], 8),
-    //        vec![3, 4]
-    //    );
-    //    assert_eq!(
-    //        thrity_four::search_range(vec![5, 7, 7, 8, 8, 10], 5),
-    //        vec![0, 0]
-    //    );
-    //    assert_eq!(thrity_four::search_range(vec![], 0), vec![-1, -1]);
-    //    assert_eq!(thrity_four::search_range(vec![2, 2], 2), vec![0, 1]);
-    assert_eq!(thrity_four::search_range(vec![1, 1, 2], 1), vec![0, 1]);
+    use forty::thirty_four;
+    assert_eq!(
+        thirty_four::search_range(vec![5, 7, 7, 8, 8, 10], 8),
+        vec![3, 4]
+    );
+    assert_eq!(
+        thirty_four::search_range(vec![5, 7, 7, 8, 8, 10], 5),
+        vec![0, 0]
+    );
+    assert_eq!(thirty_four::search_range(vec![], 0), vec![-1, -1]);
+    assert_eq!(thirty_four::search_range(vec![2, 2], 2), vec![0, 1]);
+    assert_eq!(thirty_four::search_range(vec![1, 1, 2], 1), vec![0, 1]);
+}
+
+#[test]
+fn test_search_insert() {
+    use forty::thirty_five;
+    assert_eq!(thirty_five::search_insert(vec![1, 3, 5, 6], 5), 2);
 }

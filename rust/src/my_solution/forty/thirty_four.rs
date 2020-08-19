@@ -27,7 +27,7 @@ pub fn search_range(nums: Vec<i32>, target: i32) -> Vec<i32> {
         return result;
     }
     let one_target_value = one_target_value as usize;
-    println!("one---{}", one_target_value);
+    //    println!("one---{}", one_target_value);
     if one_target_value == 0 || nums[one_target_value - 1] != target {
         result[0] = one_target_value as i32;
         result[1] = find_min_or_max(&nums, one_target_value, len - 1, target, false);
