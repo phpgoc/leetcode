@@ -112,3 +112,15 @@ fn test_count_and_say() {
     use forty::thirty_eight;
     assert_eq!(thirty_eight::count_and_say(5), String::from("111221"));
 }
+
+#[test]
+fn test_combination_sum() {
+    use forty::thirty_nine;
+    let input = vec![2, 3, 6, 7];
+    let result = thirty_nine::combination_sum(input, 7);
+    let expect = vec![vec![7], vec![2, 2, 3]];
+    for i in expect {
+        assert!(result.contains(&i));
+    }
+    //    println!("{:?}", result);
+}
