@@ -124,3 +124,14 @@ fn test_combination_sum() {
     }
     //    println!("{:?}", result);
 }
+
+#[test]
+fn test_combination_sum2() {
+    let candidates = vec![10, 1, 2, 7, 6, 1, 5];
+    let target = 8;
+    let expect = vec![vec![1, 7], vec![1, 2, 5], vec![2, 6], vec![1, 1, 6]];
+    let result = forty::forty::combination_sum2(candidates, target);
+    for i in expect {
+        assert!(result.contains(&i));
+    }
+}
