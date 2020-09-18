@@ -1,6 +1,4 @@
 use crate::my_solution::forty;
-use std::intrinsics::transmute;
-
 #[test]
 fn test_next_permutation() {
     use forty::thirty_one;
