@@ -27,3 +27,9 @@ fn test_multiply() {
         String::from("56088")
     );
 }
+
+#[test]
+fn test_jump() {
+    use fifty::forty_five;
+    assert_eq!(forty_five::jump(vec![2, 3, 1, 1, 4]), 2);
+}
