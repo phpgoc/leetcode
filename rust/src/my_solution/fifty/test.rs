@@ -18,10 +18,10 @@ fn test_trap() {
 #[test]
 fn test_multiply() {
     use fifty::forty_three;
-    //    assert_eq!(
-    //        forty_three::multiply(String::from("3"), String::from("2")),
-    //        String::from("6")
-    //    );
+    assert_eq!(
+        forty_three::multiply(String::from("3"), String::from("2")),
+        String::from("6")
+    );
     assert_eq!(
         forty_three::multiply(String::from("123"), String::from("456")),
         String::from("56088")
@@ -32,4 +32,22 @@ fn test_multiply() {
 fn test_jump() {
     use fifty::forty_five;
     assert_eq!(forty_five::jump(vec![2, 3, 1, 1, 4]), 2);
+}
+
+#[test]
+fn test_permute() {
+    use fifty::forty_six;
+    let expect = vec![
+        vec![1, 2, 3],
+        vec![1, 3, 2],
+        vec![2, 1, 3],
+        vec![2, 3, 1],
+        vec![3, 1, 2],
+        vec![3, 2, 1],
+    ];
+    let input = vec![1, 2, 3];
+    let result = forty_six::permute(input);
+    for i in expect {
+        assert!(result.contains(&i));
+    }
 }
