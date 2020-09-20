@@ -51,3 +51,15 @@ fn test_permute() {
         assert!(result.contains(&i));
     }
 }
+
+#[test]
+fn test_permute_unique() {
+    use fifty::forty_seven;
+    let expect = vec![vec![1, 1, 2], vec![1, 2, 1], vec![2, 1, 1]];
+    let input = vec![1, 2, 1];
+    let result = forty_seven::permute_unique(input);
+    println!("{:?}", result);
+    for i in expect {
+        assert!(result.contains(&i));
+    }
+}
