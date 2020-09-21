@@ -1,4 +1,5 @@
 pub mod fifty;
+pub mod fifty_one;
 pub mod forty_eight;
 pub mod forty_five;
 pub mod forty_nine;

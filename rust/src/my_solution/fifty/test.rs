@@ -90,3 +90,11 @@ fn test_my_pow() {
     assert!(result > 1023.0);
     assert!(result < 1025.0);
 }
+
+#[test]
+fn test_solve_n_queens() {
+    use fifty::fifty_one;
+    let result = fifty_one::solve_n_queens(1);
+    println!("{:?}", result);
+    println!("{}", result.len());
+}
