@@ -63,3 +63,11 @@ fn test_permute_unique() {
         assert!(result.contains(&i));
     }
 }
+
+#[test]
+fn test_rotate() {
+    use fifty::forty_eight;
+    let mut input = vec![vec![1, 2, 3], vec![4, 5, 6], vec![7, 8, 9]];
+    forty_eight::rotate(&mut input);
+    assert_eq!(input, vec![vec![7, 4, 1], vec![8, 5, 2], vec![9, 6, 3]])
+}
