@@ -83,3 +83,10 @@ fn test_group_anagrams() {
 
     assert!(result.contains(&vec![String::from("bat")]));
 }
+
+#[test]
+fn test_my_pow() {
+    let result = fifty::fifty::my_pow(2.0000, 10);
+    assert!(result > 1023.0);
+    assert!(result < 1025.0);
+}
