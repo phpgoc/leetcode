@@ -71,3 +71,15 @@ fn test_rotate() {
     forty_eight::rotate(&mut input);
     assert_eq!(input, vec![vec![7, 4, 1], vec![8, 5, 2], vec![9, 6, 3]])
 }
+
+#[test]
+fn test_group_anagrams() {
+    use fifty::forty_nine;
+    let input: Vec<_> = ["eat", "tea", "tan", "ate", "nat", "bat"]
+        .iter()
+        .map(|&x| String::from(x))
+        .collect();
+    let result = forty_nine::group_anagrams(input);
+
+    assert!(result.contains(&vec![String::from("bat")]));
+}
