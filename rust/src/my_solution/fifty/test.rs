@@ -98,3 +98,9 @@ fn test_solve_n_queens() {
     println!("{:?}", result);
     println!("{}", result.len());
 }
+
+#[test]
+fn test_total_n_queens() {
+    use fifty::fifty_two;
+    assert_eq!(fifty_two::total_n_queens(5), 10);
+}
