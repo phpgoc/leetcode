@@ -104,3 +104,13 @@ fn test_total_n_queens() {
     use fifty::fifty_two;
     assert_eq!(fifty_two::total_n_queens(5), 10);
 }
+
+#[test]
+fn test_max_sub_array() {
+    use fifty::fifty_three;
+    assert_eq!(
+        fifty_three::max_sub_array(vec![-2, 1, -3, 4, -1, 2, 1, -5, 4]),
+        6
+    );
+    assert_eq!(fifty_three::max_sub_array(vec![-2, -1]), -1);
+}
