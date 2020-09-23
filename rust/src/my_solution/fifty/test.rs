@@ -184,3 +184,13 @@ fn test_insert() {
         vec![vec![0, 0], vec![1, 5]]
     );
 }
+
+#[test]
+fn test_length_of_last_word() {
+    use fifty::fifty_eight;
+    assert_eq!(
+        fifty_eight::length_of_last_word(String::from("Hello World")),
+        5
+    );
+    assert_eq!(fifty_eight::length_of_last_word(String::from(" ab  ")), 2);
+}
