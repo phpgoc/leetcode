@@ -132,3 +132,14 @@ fn test_can_jump() {
     assert!(fifty_five::can_jump(vec![2, 3, 1, 1, 4]));
     assert!(!fifty_five::can_jump(vec![3, 2, 1, 0, 4]));
 }
+
+#[test]
+fn test_merge() {
+    use fifty::fifty_six;
+    let input = vec![vec![1, 3], vec![2, 6], vec![8, 10], vec![15, 18]];
+    let expect = vec![vec![1, 6], vec![8, 10], vec![15, 18]];
+    let result = fifty_six::merge(input);
+    for i in expect {
+        assert!(result.contains(&i));
+    }
+}
