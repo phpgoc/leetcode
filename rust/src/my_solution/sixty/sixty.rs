@@ -21,7 +21,9 @@ pub fn get_permutation(n: i32, k: i32) -> String {
         let quotient = (k - 1) / factor;
 
         result.push(chars.remove(quotient as usize));
-
+        if (k - 1) % factor == 0 {
+            break;
+        }
         k -= quotient * factor;
 
         //        println!(
