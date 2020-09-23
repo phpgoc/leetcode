@@ -194,3 +194,14 @@ fn test_length_of_last_word() {
     );
     assert_eq!(fifty_eight::length_of_last_word(String::from(" ab  ")), 2);
 }
+
+#[test]
+fn test_generate_matrix() {
+    use fifty::fifty_nine;
+    assert_eq!(
+        fifty_nine::generate_matrix(3),
+        vec![vec![1, 2, 3], vec![8, 9, 4], vec![7, 6, 5]]
+    );
+    fifty_nine::generate_matrix(2);
+    fifty_nine::generate_matrix(4);
+}
