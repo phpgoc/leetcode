@@ -143,3 +143,44 @@ fn test_merge() {
         assert!(result.contains(&i));
     }
 }
+
+#[test]
+fn test_insert() {
+    use fifty::fifty_seven;
+    let intervals = vec![vec![1, 3], vec![6, 9]];
+    let newInterval = vec![2, 5];
+    assert_eq!(
+        fifty_seven::insert(intervals, newInterval),
+        vec![vec![1, 5], vec![6, 9]]
+    );
+    assert_eq!(
+        fifty_seven::insert(
+            vec![
+                vec![1, 2],
+                vec![3, 5],
+                vec![6, 7],
+                vec![8, 10],
+                vec![12, 16]
+            ],
+            vec![4, 8],
+        ),
+        vec![vec![1, 2], vec![3, 10], vec![12, 16]]
+    );
+    assert_eq!(
+        fifty_seven::insert(
+            vec![
+                vec![1, 2],
+                vec![3, 5],
+                vec![6, 7],
+                vec![8, 10],
+                vec![12, 16]
+            ],
+            vec![4, 8],
+        ),
+        vec![vec![1, 2], vec![3, 10], vec![12, 16]]
+    );
+    assert_eq!(
+        fifty_seven::insert(vec![vec![1, 5]], vec![0, 0]),
+        vec![vec![0, 0], vec![1, 5]]
+    );
+}
