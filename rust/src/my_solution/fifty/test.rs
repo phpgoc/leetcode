@@ -125,3 +125,10 @@ fn test_spiral_order() {
     assert_eq!(fifty_four::spiral_order(vec![vec![1]]), vec![1]);
     assert_eq!(fifty_four::spiral_order(vec![vec![2, 3]]), vec![2, 3]);
 }
+
+#[test]
+fn test_can_jump() {
+    use fifty::fifty_five;
+    assert!(fifty_five::can_jump(vec![2, 3, 1, 1, 4]));
+    assert!(!fifty_five::can_jump(vec![3, 2, 1, 0, 4]));
+}
