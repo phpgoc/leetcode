@@ -25,7 +25,7 @@ pub fn my_atoi(str: String) -> i32 {
     }
     let return_str: String = char_dst.into_iter().collect();
     let r: i32 = match return_str.parse() {
-        Ok(T) => T,
+        Ok(t) => t,
         Err(_) => {
             if minus {
                 std::i32::MIN

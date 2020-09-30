@@ -27,8 +27,8 @@ pub fn str_str(haystack: String, needle: String) -> i32 {
             None => {
                 cur += needle_len;
             }
-            Some(T) => {
-                cur = cur + needle_len - T;
+            Some(t) => {
+                cur = cur + needle_len - t;
             }
         }
     }

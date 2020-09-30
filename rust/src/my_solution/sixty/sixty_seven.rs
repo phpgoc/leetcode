@@ -1,8 +1,7 @@
 pub fn add_binary(a: String, b: String) -> String {
-    let mut a = u128::from_str_radix(&a, 2).unwrap();
-    let mut b = u128::from_str_radix(&b, 2).unwrap();
+    let a = u128::from_str_radix(&a, 2).unwrap();
+    let b = u128::from_str_radix(&b, 2).unwrap();
     let mut c = a + b;
-    let mut digit = 1;
     let mut base = 2;
     loop {
         if base > c {
@@ -10,7 +9,6 @@ pub fn add_binary(a: String, b: String) -> String {
             break;
         } else {
             base *= 2;
-            digit += 1;
         }
     }
     let mut result = String::new();

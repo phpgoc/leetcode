@@ -10,7 +10,7 @@ pub fn climb_stairs(n: i32) -> i32 {
 
 fn recursive(n: i32, map: &mut HashMap<i32, i32>) -> i32 {
     return match map.get(&n) {
-        Some(&T) => T,
+        Some(&t) => t,
         None => {
             let result = recursive(n - 1, map) + recursive(n - 2, map);
             map.insert(n, result);

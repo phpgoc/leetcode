@@ -39,7 +39,7 @@ fn add_to_vec(
     result: &mut Vec<String>,
 ) {
     if *count == 1 {
-        let mut str = format!("{:width$}", words[from], width = *max_width);
+        let str = format!("{:width$}", words[from], width = *max_width);
         result.push(str);
         return;
     }

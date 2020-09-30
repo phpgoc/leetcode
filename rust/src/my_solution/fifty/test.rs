@@ -148,9 +148,9 @@ fn test_merge() {
 fn test_insert() {
     use fifty::fifty_seven;
     let intervals = vec![vec![1, 3], vec![6, 9]];
-    let newInterval = vec![2, 5];
+    let new_interval = vec![2, 5];
     assert_eq!(
-        fifty_seven::insert(intervals, newInterval),
+        fifty_seven::insert(intervals, new_interval),
         vec![vec![1, 5], vec![6, 9]]
     );
     assert_eq!(
