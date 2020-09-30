@@ -28,3 +28,9 @@ fn test_rotate_right() {
     }));
     assert_eq!(sixty_one::rotate_right(input, 1), expect);
 }
+
+#[test]
+fn test_unique_paths() {
+    use sixty::sixty_two;
+    assert_eq!(sixty_two::unique_paths(7, 3), 28);
+}
