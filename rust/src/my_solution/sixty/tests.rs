@@ -238,3 +238,9 @@ fn test_full_justify() {
         ]
     );
 }
+
+#[test]
+fn test_my_sqrt() {
+    use sixty::sixty_nine;
+    assert_eq!(sixty_nine::my_sqrt(8), 2);
+}
