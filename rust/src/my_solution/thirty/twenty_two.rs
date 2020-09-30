@@ -14,7 +14,7 @@ pub fn generate_parenthesis(n: i32) -> Vec<String> {
 }
 
 fn generate_parenthesis_recursion(n: i32) -> Vec<String> {
-    let mut map = CACHE.lock().unwrap();
+    let map = CACHE.lock().unwrap();
 
     if let Some(t) = map.get(&n) {
         return t.clone();
