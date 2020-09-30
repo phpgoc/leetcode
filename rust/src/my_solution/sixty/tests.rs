@@ -179,3 +179,10 @@ fn test_is_number() {
     assert!(sixty_five::is_number(String::from("  6e-1  ")));
     assert!(!sixty_five::is_number(String::from("  e  ")));
 }
+
+#[test]
+fn test_plus_one() {
+    use sixty::sixty_six;
+    assert_eq!(sixty_six::plus_one(vec![1, 2, 3]), vec![1, 2, 4]);
+    assert_eq!(sixty_six::plus_one(vec![9, 9]), vec![1, 0, 0]);
+}
