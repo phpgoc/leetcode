@@ -169,3 +169,13 @@ fn test_min_path_sum() {
         7
     );
 }
+
+#[test]
+fn test_is_number() {
+    use sixty::sixty_five;
+    assert!(sixty_five::is_number(String::from(" -90e3   ")));
+    assert!(!sixty_five::is_number(String::from(" -+3  ")));
+    assert!(!sixty_five::is_number(String::from("95a54e53   ")));
+    assert!(sixty_five::is_number(String::from("  6e-1  ")));
+    assert!(!sixty_five::is_number(String::from("  e  ")));
+}
