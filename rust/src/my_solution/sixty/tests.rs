@@ -160,3 +160,12 @@ fn test_unique_paths_with_obstacles() {
         718991952
     );
 }
+
+#[test]
+fn test_min_path_sum() {
+    use sixty::sixty_four;
+    assert_eq!(
+        sixty_four::min_path_sum(vec![vec![1, 3, 1], vec![1, 5, 1], vec![4, 2, 1]]),
+        7
+    );
+}
