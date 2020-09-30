@@ -14,7 +14,7 @@ pub fn total_n_queens(n: i32) -> i32 {
 
 fn dfs(n: i32, option: &mut Vec<i32>, y: i32, answer: &mut i32) {
     'outer: for i in 0..n {
-        'inner: for j in 0..option.len() {
+        for j in 0..option.len() {
             if (y - j as i32) == (i - option[j]).abs() || option[j] == i {
                 continue 'outer;
             }

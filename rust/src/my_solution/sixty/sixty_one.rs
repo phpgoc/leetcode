@@ -1,5 +1,3 @@
-use std::borrow::BorrowMut;
-
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
     pub val: i32,

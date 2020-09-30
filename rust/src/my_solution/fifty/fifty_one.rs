@@ -14,7 +14,7 @@ pub fn solve_n_queens(n: i32) -> Vec<Vec<String>> {
 
 fn dfs(n: i32, option: &mut Vec<i32>, y: i32, answer: &mut Vec<Vec<String>>) {
     'outer: for i in 0..n {
-        'inner: for j in 0..option.len() {
+        for j in 0..option.len() {
             if (y - j as i32) == (i - option[j]).abs() || option[j] == i {
                 continue 'outer;
             }

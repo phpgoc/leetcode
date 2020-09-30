@@ -22,7 +22,6 @@ pub fn is_number(s: String) -> bool {
                             return false;
                         }
                     }
-                    started_number = true;
                 } else {
                     return false;
                 }
