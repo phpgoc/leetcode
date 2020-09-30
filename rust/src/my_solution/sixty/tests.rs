@@ -1,5 +1,4 @@
 use crate::my_solution::sixty;
-use crate::my_solution::sixty::sixty::get_permutation;
 
 #[test]
 fn test_get_permutation() {
@@ -185,4 +184,57 @@ fn test_plus_one() {
     use sixty::sixty_six;
     assert_eq!(sixty_six::plus_one(vec![1, 2, 3]), vec![1, 2, 4]);
     assert_eq!(sixty_six::plus_one(vec![9, 9]), vec![1, 0, 0]);
+}
+
+#[test]
+fn test_add_binary() {
+    use sixty::sixty_seven;
+    assert_eq!(
+        sixty_seven::add_binary(String::from("1010"), String::from("1011")),
+        String::from("10101")
+    );
+    assert_eq!(
+        sixty_seven::add_binary(String::from("10100000100100110110010000010101111011011001101110111111111101000000101111001110001111100001101"
+        ), String::from("110101001011101110001111100110001010100001101011101010000011011011001011101111001100000011011110011")),
+        String::from("110111101100010011000101110110100000011101000101011001000011011000001100011110011010010011000000000")
+    );
+}
+
+#[test]
+fn test_full_justify() {
+    use sixty::sixty_eight;
+    let p_input = [
+        "This",
+        "is",
+        "an",
+        "example",
+        "of",
+        "text",
+        "justification.",
+    ];
+    let input: Vec<_> = p_input.iter().map(|&s| String::from(s)).collect();
+    assert_eq!(
+        sixty_eight::full_justify(input, 16),
+        vec![
+            String::from("This    is    an"),
+            String::from("example  of text"),
+            String::from("justification.  ")
+        ]
+    );
+
+    let p_input = [
+        "ask", "not", "what", "your", "country", "can", "do", "for", "you", "ask", "what", "you",
+        "can", "do", "for", "your", "country",
+    ];
+    let input: Vec<_> = p_input.iter().map(|&s| String::from(s)).collect();
+    assert_eq!(
+        sixty_eight::full_justify(input, 16),
+        vec![
+            String::from("ask   not   what"),
+            String::from("your country can"),
+            String::from("do  for  you ask"),
+            String::from("what  you can do"),
+            String::from("for your country")
+        ]
+    );
 }
