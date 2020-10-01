@@ -74,3 +74,14 @@ fn test_min_window() {
         String::from("")
     );
 }
+
+#[test]
+fn test_combine() {
+    use seventy::seventy_seven;
+    let result = seventy_seven::combine(3, 1);
+    assert!(result.contains(&vec![1]));
+    assert!(result.contains(&vec![2]));
+    assert!(result.contains(&vec![3]));
+    //    println!("{:?}", seventy_seven::combine(4, 2));
+    //    println!("{:?}", seventy_seven::combine(5, 3));
+}
