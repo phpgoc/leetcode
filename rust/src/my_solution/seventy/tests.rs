@@ -44,3 +44,12 @@ fn test_set_zeroes() {
     set_zeroes(&mut input);
     assert_eq!(input, vec![vec![1, 0, 1], vec![0, 0, 0], vec![1, 0, 1]]);
 }
+
+#[test]
+fn test_search_matrix() {
+    use seventy::seventy_four;
+    assert!(seventy_four::search_matrix(
+        vec![vec![1, 3, 5, 7], vec![10, 11, 16, 20], vec![23, 30, 34, 50]],
+        3,
+    ));
+}
