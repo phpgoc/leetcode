@@ -1,5 +1,4 @@
 use crate::my_solution::seventy;
-use crate::my_solution::seventy::seventy_three::set_zeroes;
 
 #[test]
 fn test_climb_stairs() {
@@ -41,7 +40,7 @@ fn test_min_distance() {
 fn test_set_zeroes() {
     use seventy::seventy_three;
     let mut input = vec![vec![1, 1, 1], vec![1, 0, 1], vec![1, 1, 1]];
-    set_zeroes(&mut input);
+    seventy_three::set_zeroes(&mut input);
     assert_eq!(input, vec![vec![1, 0, 1], vec![0, 0, 0], vec![1, 0, 1]]);
 }
 
@@ -52,4 +51,12 @@ fn test_search_matrix() {
         vec![vec![1, 3, 5, 7], vec![10, 11, 16, 20], vec![23, 30, 34, 50]],
         3,
     ));
+}
+
+#[test]
+fn test_sort_colors() {
+    use seventy::seventy_five;
+    let mut input = vec![2, 0, 2, 1, 1, 0];
+    seventy_five::sort_colors(&mut input);
+    assert_eq!(input, vec![0, 0, 1, 1, 2, 2]);
 }
