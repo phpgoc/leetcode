@@ -19,3 +19,19 @@ fn test_simplify_path() {
         String::from("/c")
     );
 }
+
+#[test]
+fn test_min_distance() {
+    use seventy::seventy_two;
+    assert_eq!(
+        seventy_two::min_distance(String::from("horse"), String::from("ros")),
+        3
+    );
+    assert_eq!(
+        seventy_two::min_distance(
+            String::from("zoologicoarchaeologist"),
+            String::from("zoogeologist"),
+        ),
+        10
+    );
+}
