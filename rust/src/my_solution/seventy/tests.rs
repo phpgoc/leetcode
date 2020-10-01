@@ -64,8 +64,13 @@ fn test_sort_colors() {
 #[test]
 fn test_min_window() {
     use seventy::like_seventy_six;
+    use seventy::seventy_six;
     assert_eq!(
         like_seventy_six::min_window(String::from("ADOBECODEBANC"), String::from("ABC")),
         String::from("BANC")
+    );
+    assert_eq!(
+        seventy_six::min_window(String::from("a"), String::from("aa")),
+        String::from("")
     );
 }
