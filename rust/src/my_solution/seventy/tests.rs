@@ -91,3 +91,16 @@ fn test_subsets() {
     use seventy::seventy_eight;
     seventy_eight::subsets(vec![1, 2, 3]);
 }
+
+#[test]
+fn test_exist() {
+    use seventy::seventy_nine;
+    let board = vec![
+        vec!['A', 'B', 'C', 'E'],
+        vec!['S', 'F', 'C', 'S'],
+        vec!['A', 'D', 'E', 'E'],
+    ];
+    assert!(seventy_nine::exist(board.clone(), String::from("ABCCED")));
+    assert!(seventy_nine::exist(board.clone(), String::from("SEE")));
+    assert!(!seventy_nine::exist(board.clone(), String::from("ABCB")));
+}
