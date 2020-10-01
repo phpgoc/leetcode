@@ -60,3 +60,12 @@ fn test_sort_colors() {
     seventy_five::sort_colors(&mut input);
     assert_eq!(input, vec![0, 0, 1, 1, 2, 2]);
 }
+
+#[test]
+fn test_min_window() {
+    use seventy::like_seventy_six;
+    assert_eq!(
+        like_seventy_six::min_window(String::from("ADOBECODEBANC"), String::from("ABC")),
+        String::from("BANC")
+    );
+}
