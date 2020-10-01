@@ -85,3 +85,9 @@ fn test_combine() {
     //    println!("{:?}", seventy_seven::combine(4, 2));
     //    println!("{:?}", seventy_seven::combine(5, 3));
 }
+
+#[test]
+fn test_subsets() {
+    use seventy::seventy_eight;
+    seventy_eight::subsets(vec![1, 2, 3]);
+}
