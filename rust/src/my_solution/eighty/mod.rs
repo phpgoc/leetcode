@@ -1,4 +1,5 @@
 pub mod eighty;
 pub mod eighty_one;
+pub mod eighty_two;
 #[cfg(test)]
 mod tests;

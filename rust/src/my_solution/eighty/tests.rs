@@ -15,3 +15,20 @@ fn test_search() {
     assert!(eighty_one::search(vec![1, 1, 3, 1], 3));
     assert!(eighty_one::search(vec![0, 0, 1, 1, 2, 0], 2));
 }
+
+#[test]
+fn test_delete_duplicates() {
+    use eighty::eighty_two;
+    use eighty_two::ListNode;
+    let input = Some(Box::from(ListNode {
+        val: 1,
+        next: Some(Box::from(ListNode {
+            val: 1,
+            next: Some(Box::from(ListNode { val: 2, next: None })),
+        })),
+    }));
+    assert_eq!(
+        eighty_two::delete_duplicates(input),
+        Some(Box::from(ListNode { val: 2, next: None }))
+    );
+}
