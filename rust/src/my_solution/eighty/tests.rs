@@ -32,3 +32,23 @@ fn test_delete_duplicates() {
         Some(Box::from(ListNode { val: 2, next: None }))
     );
 }
+
+#[test]
+fn test_delete_duplicates2() {
+    use eighty::eighty_three;
+    use eighty_three::ListNode;
+    let input = Some(Box::from(ListNode {
+        val: 1,
+        next: Some(Box::from(ListNode {
+            val: 1,
+            next: Some(Box::from(ListNode { val: 2, next: None })),
+        })),
+    }));
+    assert_eq!(
+        eighty_three::delete_duplicates(input),
+        Some(Box::from(ListNode {
+            val: 1,
+            next: Some(Box::from(ListNode { val: 2, next: None })),
+        }))
+    );
+}
