@@ -6,7 +6,6 @@ pub fn exist(board: Vec<Vec<char>>, word: String) -> bool {
     let x = board[0].len();
     let mut in_path = vec![];
     let str_vec: Vec<_> = word.chars().collect();
-    let str_len = str_vec.len();
 
     for y_i in 0..y {
         for x_i in 0..x {

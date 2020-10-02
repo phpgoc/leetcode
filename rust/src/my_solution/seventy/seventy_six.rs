@@ -21,7 +21,7 @@ pub fn min_window(s: String, t: String) -> String {
 
     for (k, v) in s_vec.iter().enumerate() {
         match t_map.get(v) {
-            Some(t) => {
+            Some(_t) => {
                 map.get_mut(&v).unwrap().push_back(k);
             }
             None => {}
