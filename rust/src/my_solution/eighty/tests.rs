@@ -63,6 +63,10 @@ fn test_largest_rectangle_area() {
     assert_eq!(eighty_four::largest_rectangle_area(vec![2, 1, 0, 2]), 2);
     assert_eq!(eighty_four::largest_rectangle_area(vec![5, 4, 1, 2]), 8);
     assert_eq!(
+        eighty_four::largest_rectangle_area(vec![12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2]),
+        42
+    );
+    assert_eq!(
         eighty_four::largest_rectangle_area(vec![4, 2, 0, 3, 2, 5]),
         6
     );

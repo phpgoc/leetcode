@@ -3,7 +3,8 @@ pub fn largest_rectangle_area(heights: Vec<i32>) -> i32 {
     let mut result: i32 = 0;
     let mut stack = vec![];
     let mut max_height = -1;
-    let mut cur_index = 0;
+    let mut cur_i = 0;
+    let mut to_i = 0;
     let mut poped = false;
     for (i, &v) in heights.iter().enumerate() {
         //        println!(
@@ -12,12 +13,17 @@ pub fn largest_rectangle_area(heights: Vec<i32>) -> i32 {
         //        );
         poped = false;
         while max_height > v {
-            result = result.max((i - cur_index) as i32 * max_height);
+            result = result.max((i - to_i) as i32 * max_height);
             match stack.pop() {
-                Some((index, h)) => {
-                    cur_index = index;
-                    max_height = h;
+                Some((to_i_, cur_i_, height)) => {
                     poped = true;
+                    if height <= v {
+                        stack.push((to_i_, cur_i_, height));
+                        break;
+                    }
+                    cur_i = cur_i_;
+                    to_i = to_i_;
+                    max_height = height;
                 }
                 None => {
                     max_height = -1;
@@ -25,24 +31,20 @@ pub fn largest_rectangle_area(heights: Vec<i32>) -> i32 {
             }
         }
 
-        if max_height != -1 {
-            stack.push((cur_index, max_height));
-        }
-        stack.push((cur_index, v));
         if poped {
-            cur_index = i + 1;
+            stack.push((to_i, i, v));
         } else {
-            cur_index += 1;
+            stack.push((i, i, v));
+            to_i = i;
         }
         max_height = v;
         //        println!(
-        //            "{:?},result = {},max_height = {}, cur_index = {} , i = {},v = {}",
-        //            stack, result, max_height, cur_index, i, v
+        //            "{:?},result = {},max_height = {}, cur_i = {} , i = {},v = {}",
+        //            stack, result, max_height, cur_i, i, v
         //        );
     }
-    while let Some((i, h)) = stack.pop() {
-        max_height = h;
-        result = result.max((len - i) as i32 * h);
+    while let Some((to_i, _, h)) = stack.pop() {
+        result = result.max((len - to_i) as i32 * h);
     }
     result
 }
