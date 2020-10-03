@@ -52,3 +52,18 @@ fn test_delete_duplicates2() {
         }))
     );
 }
+
+#[test]
+fn test_largest_rectangle_area() {
+    use eighty::eighty_four;
+    assert_eq!(
+        eighty_four::largest_rectangle_area(vec![2, 1, 5, 6, 2, 3]),
+        10
+    );
+    assert_eq!(eighty_four::largest_rectangle_area(vec![2, 1, 0, 2]), 2);
+    assert_eq!(eighty_four::largest_rectangle_area(vec![5, 4, 1, 2]), 8);
+    assert_eq!(
+        eighty_four::largest_rectangle_area(vec![4, 2, 0, 3, 2, 5]),
+        6
+    );
+}
