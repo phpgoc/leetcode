@@ -3,7 +3,6 @@ pub fn largest_rectangle_area(heights: Vec<i32>) -> i32 {
     let mut result: i32 = 0;
     let mut stack = vec![];
     let mut max_height = -1;
-    let mut cur_i = 0;
     let mut to_i = 0;
     let mut poped = false;
     for (i, &v) in heights.iter().enumerate() {
@@ -15,13 +14,12 @@ pub fn largest_rectangle_area(heights: Vec<i32>) -> i32 {
         while max_height > v {
             result = result.max((i - to_i) as i32 * max_height);
             match stack.pop() {
-                Some((to_i_, cur_i_, height)) => {
+                Some((to_i_, height)) => {
                     poped = true;
                     if height <= v {
-                        stack.push((to_i_, cur_i_, height));
+                        stack.push((to_i_, height));
                         break;
                     }
-                    cur_i = cur_i_;
                     to_i = to_i_;
                     max_height = height;
                 }
@@ -32,9 +30,9 @@ pub fn largest_rectangle_area(heights: Vec<i32>) -> i32 {
         }
 
         if poped {
-            stack.push((to_i, i, v));
+            stack.push((to_i, v));
         } else {
-            stack.push((i, i, v));
+            stack.push((i, v));
             to_i = i;
         }
         max_height = v;
@@ -43,7 +41,7 @@ pub fn largest_rectangle_area(heights: Vec<i32>) -> i32 {
         //            stack, result, max_height, cur_i, i, v
         //        );
     }
-    while let Some((to_i, _, h)) = stack.pop() {
+    while let Some((to_i, h)) = stack.pop() {
         result = result.max((len - to_i) as i32 * h);
     }
     result

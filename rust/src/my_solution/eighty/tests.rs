@@ -71,3 +71,27 @@ fn test_largest_rectangle_area() {
         6
     );
 }
+
+#[test]
+fn test_maximal_rectangle() {
+    use eighty::eighty_five;
+    assert_eq!(
+        eighty_five::maximal_rectangle(vec![
+            vec!['1', '0', '1', '0', '0'],
+            vec!['1', '0', '1', '1', '1'],
+            vec!['1', '1', '1', '1', '1'],
+            vec!['1', '0', '0', '1', '0']
+        ]),
+        6
+    );
+    assert_eq!(
+        eighty_five::maximal_rectangle(vec![
+            vec!['1', '1', '1', '1', '1', '1', '1', '1'],
+            vec!['1', '1', '1', '1', '1', '1', '1', '0'],
+            vec!['1', '1', '1', '1', '1', '1', '1', '0'],
+            vec!['1', '1', '1', '1', '1', '0', '0', '0'],
+            vec!['0', '1', '1', '1', '1', '0', '0', '0']
+        ]),
+        21
+    );
+}
