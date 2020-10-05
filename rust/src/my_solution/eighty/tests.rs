@@ -95,3 +95,32 @@ fn test_maximal_rectangle() {
         21
     );
 }
+
+#[test]
+fn test_partition() {
+    use eighty::eighty_six;
+    use eighty::eighty_six::ListNode;
+    let input = Some(Box::from(ListNode {
+        val: 4,
+        next: Some(Box::from(ListNode {
+            val: 2,
+            next: Some(Box::from(ListNode {
+                val: 3,
+                next: Some(Box::from(ListNode { val: 1, next: None })),
+            })),
+        })),
+    }));
+    assert_eq!(
+        eighty_six::partition(input, 3),
+        Some(Box::from(ListNode {
+            val: 2,
+            next: Some(Box::from(ListNode {
+                val: 1,
+                next: Some(Box::from(ListNode {
+                    val: 4,
+                    next: Some(Box::from(ListNode { val: 3, next: None })),
+                })),
+            })),
+        }))
+    )
+}
