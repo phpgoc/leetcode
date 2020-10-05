@@ -133,3 +133,10 @@ fn test_merge() {
     eighty_eight::merge(&mut m, 3, &mut n, 3);
     assert_eq!(m, vec![1, 2, 2, 3, 5, 6]);
 }
+
+#[test]
+fn test_gray_code() {
+    use eighty::eighty_nine;
+    let result = eighty_nine::gray_code(2);
+    println!("{:?}", result);
+}
