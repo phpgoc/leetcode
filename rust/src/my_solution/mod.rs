@@ -1,7 +1,7 @@
 pub mod eighty;
 pub mod fifty;
 pub mod forty;
-pub mod ninty;
+pub mod ninety;
 pub mod seventy;
 pub mod sixty;
 pub mod ten;
