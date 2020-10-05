@@ -124,3 +124,12 @@ fn test_partition() {
         }))
     )
 }
+
+#[test]
+fn test_merge() {
+    use eighty::eighty_eight;
+    let mut m = vec![1, 2, 3, 0, 0, 0];
+    let mut n = vec![2, 5, 6];
+    eighty_eight::merge(&mut m, 3, &mut n, 3);
+    assert_eq!(m, vec![1, 2, 2, 3, 5, 6]);
+}
