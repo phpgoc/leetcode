@@ -14,7 +14,7 @@ fn test_subsets_with_dup() {
     for i in expect {
         assert!(result.contains(&i));
     }
-    let result = ninety::ninety::subsets_with_dup(vec![5, 5, 5, 5, 5]);
+    ninety::ninety::subsets_with_dup(vec![5, 5, 5, 5, 5]);
 }
 
 #[test]
@@ -26,4 +26,19 @@ fn test_num_decodings() {
         ninety_one::num_decodings(String::from("2611055971756562")),
         4
     );
+}
+
+#[test]
+fn test_restore_ip_addresses() {
+    use ninety::ninety_three;
+    let expect = vec![
+        String::from("255.255.11.135"),
+        String::from("255.255.111.35"),
+    ];
+    let result = ninety_three::restore_ip_addresses(String::from("25525511135"));
+    assert_eq!(result.len(), expect.len());
+    for i in result {
+        assert!(expect.contains(&i));
+    }
+    ninety_three::restore_ip_addresses(String::from("010010"));
 }
