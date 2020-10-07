@@ -1,4 +1,6 @@
 use crate::my_solution::ninety;
+use std::cell::RefCell;
+use std::rc::Rc;
 
 #[test]
 fn test_subsets_with_dup() {
@@ -41,4 +43,22 @@ fn test_restore_ip_addresses() {
         assert!(expect.contains(&i));
     }
     ninety_three::restore_ip_addresses(String::from("010010"));
+}
+
+#[test]
+fn test_inorder_traversal() {
+    use ninety::ninety_four;
+    use ninety_four::TreeNode;
+    let three = Some(Rc::from(RefCell::from(TreeNode::new(3))));
+    let two = Some(Rc::from(RefCell::from(TreeNode {
+        val: 2,
+        left: three,
+        right: None,
+    })));
+    let one = Some(Rc::from(RefCell::from(TreeNode {
+        val: 1,
+        left: None,
+        right: two,
+    })));
+    assert_eq!(ninety_four::inorder_traversal(one), vec![1, 3, 2]);
 }
