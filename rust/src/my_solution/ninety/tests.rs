@@ -62,3 +62,13 @@ fn test_inorder_traversal() {
     })));
     assert_eq!(ninety_four::inorder_traversal(one), vec![1, 3, 2]);
 }
+
+#[test]
+fn test_is_interleave() {
+    use ninety::ninety_seven;
+    assert!(ninety_seven::is_interleave(
+        String::from("aabcc"),
+        String::from("dbbca"),
+        String::from("aadbbcbcac"),
+    ));
+}
