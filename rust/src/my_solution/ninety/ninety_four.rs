@@ -28,7 +28,7 @@ pub fn inorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
     res
 }
 
-fn recursive(mut root: Rc<RefCell<TreeNode>>, res: &mut Vec<i32>) {
+fn recursive(root: Rc<RefCell<TreeNode>>, res: &mut Vec<i32>) {
     let val = root.borrow().val;
     let mut node = root.borrow_mut().left.take();
 
