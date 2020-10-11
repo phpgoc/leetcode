@@ -18,3 +18,17 @@ fn test_max_profit() {
     );
     assert_eq!(one_hundred_twenty_one::max_profit(vec![7, 6, 4, 3, 1]), 0);
 }
+
+#[test]
+fn test_max_profit2() {
+    use one_hundred_twenty::one_hundred_twenty_two;
+    //    assert_eq!(
+    //        one_hundred_twenty_two::max_profit(vec![7, 1, 5, 3, 6, 4]),
+    //        7
+    //    );
+    //    assert_eq!(one_hundred_twenty_two::max_profit(vec![1, 2, 3, 4, 5]), 4);
+    assert_eq!(
+        one_hundred_twenty_two::max_profit(vec![3, 2, 6, 5, 0, 3]),
+        7
+    );
+}
