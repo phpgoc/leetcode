@@ -8,3 +8,13 @@ fn test_minimum_total() {
         11
     );
 }
+
+#[test]
+fn test_max_profit() {
+    use one_hundred_twenty::one_hundred_twenty_one;
+    assert_eq!(
+        one_hundred_twenty_one::max_profit(vec![7, 1, 5, 3, 6, 4]),
+        5
+    );
+    assert_eq!(one_hundred_twenty_one::max_profit(vec![7, 6, 4, 3, 1]), 0);
+}
