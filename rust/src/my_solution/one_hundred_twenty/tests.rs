@@ -32,3 +32,12 @@ fn test_max_profit2() {
         7
     );
 }
+
+#[test]
+fn test_longest_consecutive() {
+    use one_hundred_twenty::one_hundred_twenty_eight;
+    assert_eq!(
+        one_hundred_twenty_eight::longest_consecutive(vec![100, 4, 200, 1, 3, 2]),
+        4
+    );
+}
