@@ -1,9 +1,8 @@
 use std::borrow::Borrow;
 use std::collections::HashSet;
-use std::iter::FromIterator;
 
 pub fn longest_consecutive(nums: Vec<i32>) -> i32 {
-    let mut set = nums.iter().collect::<HashSet<_>>();
+    let set = nums.iter().collect::<HashSet<_>>();
     let mut res = 0;
     for i in &nums {
         if !set.contains((i - 1).borrow()) {
