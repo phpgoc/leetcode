@@ -65,3 +65,9 @@ fn test_candy() {
         15
     );
 }
+
+#[test]
+fn test_single_number() {
+    use one_hundred_thirty::one_hundred_thirty_six;
+    assert_eq!(one_hundred_thirty_six::single_number(vec![1, 2, 2]), 1);
+}
