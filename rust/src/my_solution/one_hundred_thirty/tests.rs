@@ -71,3 +71,12 @@ fn test_single_number() {
     use one_hundred_thirty::one_hundred_thirty_six;
     assert_eq!(one_hundred_thirty_six::single_number(vec![1, 2, 2]), 1);
 }
+
+#[test]
+fn test_single_number2() {
+    use one_hundred_thirty::one_hundred_thirty_seven;
+    assert_eq!(
+        one_hundred_thirty_seven::single_number(vec![0, 1, 0, 1, 0, 1, 99]),
+        99
+    );
+}
