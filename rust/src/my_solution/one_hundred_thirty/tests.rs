@@ -31,3 +31,12 @@ fn test_partition() {
         assert!(result.contains(&i));
     }
 }
+
+#[test]
+fn test_min_cut() {
+    use one_hundred_thirty::one_hundred_thirty_two;
+    assert_eq!(one_hundred_thirty_two::min_cut(String::from("aab")), 1);
+    assert_eq!(one_hundred_thirty_two::min_cut(String::from("aabc")), 2);
+    assert_eq!(one_hundred_thirty_two::min_cut(String::from("aabaac")), 1);
+    assert_eq!(one_hundred_thirty_two::min_cut(String::from("apjesgpsxoeiokmqmfgvjslcjukbqxpsobyhjpbgdfruqdkeiszrlmtwgfxyfostpqczidfljwfbbrflkgdvtytbgqalguewnhvvmcgxboycffopmtmhtfizxkmeftcucxpobxmelmjtuzigsxnncxpaibgpuijwhankxbplpyejxmrrjgeoevqozwdtgospohznkoyzocjlracchjqnggbfeebmuvbicbvmpuleywrpzwsihivnrwtxcukwplgtobhgxukwrdlszfaiqxwjvrgxnsveedxseeyeykarqnjrtlaliyudpacctzizcftjlunlgnfwcqqxcqikocqffsjyurzwysfjmswvhbrmshjuzsgpwyubtfbnwajuvrfhlccvfwhxfqthkcwhatktymgxostjlztwdxritygbrbibdgkezvzajizxasjnrcjwzdfvdnwwqeyumkamhzoqhnqjfzwzbixclcxqrtniznemxeahfozp")), 452);
+}
