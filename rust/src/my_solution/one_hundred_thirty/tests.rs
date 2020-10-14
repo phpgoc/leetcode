@@ -80,3 +80,30 @@ fn test_single_number2() {
         99
     );
 }
+
+#[test]
+fn test_word_break() {
+    use one_hundred_thirty::one_hundred_thirty_nine;
+    assert!(one_hundred_thirty_nine::word_break(
+        String::from("leetcode"),
+        vec![
+            String::from("leet"),
+            String::from("code"),
+            String::from("c"),
+            String::from("co")
+        ],
+    ));
+    assert!(!one_hundred_thirty_nine::word_break(
+        String::from("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab"),
+        vec![
+            String::from("a"),
+            String::from("aa"),
+            String::from("aaa"),
+            String::from("aaaa"),
+            String::from("aaaaa"),
+            String::from("aaaaaa"),
+            String::from("aaaaaaa"),
+            String::from("aaaaaaaa"),
+        ],
+    ));
+}
