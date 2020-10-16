@@ -13,3 +13,10 @@ fn test_eval_rpn() {
         9
     );
 }
+
+#[test]
+fn test_max_product() {
+    use one_hundred_fifty::one_hundred_fifty_two;
+    assert_eq!(one_hundred_fifty_two::max_product(vec![2, 3, -2, 4]), 6);
+    assert_eq!(one_hundred_fifty_two::max_product(vec![-2, 0, -1]), 0);
+}
