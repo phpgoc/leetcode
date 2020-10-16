@@ -4,6 +4,7 @@ pub mod forty;
 pub mod ninety;
 pub mod one_hundred_fifty;
 pub mod one_hundred_forty;
+pub mod one_hundred_sixty;
 pub mod one_hundred_ten;
 pub mod one_hundred_thirty;
 pub mod one_hundred_twenty;
