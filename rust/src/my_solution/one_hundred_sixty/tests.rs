@@ -27,7 +27,7 @@ fn test_compare_version() {
 }
 
 #[test]
-fn fraction_to_decimal() {
+fn test_fraction_to_decimal() {
     use one_hundred_sixty::one_hundred_sixty_six;
     assert_eq!(
         one_hundred_sixty_six::fraction_to_decimal(1, 2),
@@ -48,5 +48,14 @@ fn fraction_to_decimal() {
     assert_eq!(
         one_hundred_sixty_six::fraction_to_decimal(-1, -2147483648),
         String::from("0.0000000004656612873077392578125")
+    );
+}
+
+#[test]
+fn test_two_sum() {
+    use one_hundred_sixty::one_hundred_sixty_seven;
+    assert_eq!(
+        one_hundred_sixty_seven::two_sum(vec![2, 7, 11, 15], 9),
+        vec![1, 2]
     );
 }
