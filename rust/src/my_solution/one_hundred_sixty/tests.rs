@@ -25,3 +25,28 @@ fn test_compare_version() {
         0
     );
 }
+
+#[test]
+fn fraction_to_decimal() {
+    use one_hundred_sixty::one_hundred_sixty_six;
+    assert_eq!(
+        one_hundred_sixty_six::fraction_to_decimal(1, 2),
+        String::from("0.5")
+    );
+    assert_eq!(
+        one_hundred_sixty_six::fraction_to_decimal(2, 3),
+        String::from("0.(6)")
+    );
+    assert_eq!(
+        one_hundred_sixty_six::fraction_to_decimal(1, 333),
+        String::from("0.(003)")
+    );
+    assert_eq!(
+        one_hundred_sixty_six::fraction_to_decimal(1, 17),
+        String::from("0.(0588235294117647)")
+    );
+    assert_eq!(
+        one_hundred_sixty_six::fraction_to_decimal(-1, -2147483648),
+        String::from("0.0000000004656612873077392578125")
+    );
+}
