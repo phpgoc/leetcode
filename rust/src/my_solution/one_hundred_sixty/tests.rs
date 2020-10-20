@@ -72,3 +72,9 @@ fn test_convert_to_title() {
         String::from("ZY")
     );
 }
+
+#[test]
+fn test_majority_element() {
+    use one_hundred_sixty::one_hundred_sixty_nine;
+    assert_eq!(one_hundred_sixty_nine::majority_element(vec![1, 2, 2]), 2);
+}
