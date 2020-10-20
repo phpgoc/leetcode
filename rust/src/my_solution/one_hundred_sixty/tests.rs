@@ -59,3 +59,16 @@ fn test_two_sum() {
         vec![1, 2]
     );
 }
+
+#[test]
+fn test_convert_to_title() {
+    use one_hundred_sixty::one_hundred_sixty_eight;
+    assert_eq!(
+        one_hundred_sixty_eight::convert_to_title(28),
+        String::from("AB")
+    );
+    assert_eq!(
+        one_hundred_sixty_eight::convert_to_title(701),
+        String::from("ZY")
+    );
+}
