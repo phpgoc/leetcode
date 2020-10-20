@@ -3,7 +3,7 @@ pub fn convert_to_title(n: i32) -> String {
     if n < 1 {
         return res;
     }
-    let chars = "ABCDEFGHIJLKMNOPQRSTUVWXYZ".chars().collect::<Vec<_>>();
+    let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".chars().collect::<Vec<_>>();
     let mut n = n as usize;
     while n != 0 {
         let left = (n - 1) % 26;
