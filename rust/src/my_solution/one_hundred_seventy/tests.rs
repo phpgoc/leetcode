@@ -26,3 +26,20 @@ fn test_calculate_minimum_hp() {
         7
     );
 }
+
+#[test]
+fn test_largest_number() {
+    use one_hundred_seventy::one_hundred_seventy_nine;
+    assert_eq!(
+        one_hundred_seventy_nine::largest_number(vec![3, 30, 34, 5, 9]),
+        String::from("9534330")
+    );
+    assert_eq!(
+        one_hundred_seventy_nine::largest_number(vec![10, 2]),
+        String::from("210")
+    );
+    assert_eq!(
+        one_hundred_seventy_nine::largest_number(vec![432, 43243]),
+        String::from("43243432")
+    );
+}
