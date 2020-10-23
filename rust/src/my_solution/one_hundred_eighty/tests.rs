@@ -1235,3 +1235,14 @@ fn test_max_profit() {
     );
     */
 }
+
+#[test]
+fn test_rotate() {
+    use one_hundred_eighty::one_hundred_eighty_nine;
+    let mut input = vec![1, 2, 3, 4, 5, 6, 7];
+    one_hundred_eighty_nine::rotate(&mut input, 3);
+    assert_eq!(input, vec![5, 6, 7, 1, 2, 3, 4]);
+    input = vec![-1, -100, 3, 99];
+    one_hundred_eighty_nine::rotate(&mut input, 2);
+    assert_eq!(input, vec![3, 99, -1, -100]);
+}
