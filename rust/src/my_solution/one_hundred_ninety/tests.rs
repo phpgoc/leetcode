@@ -17,3 +17,9 @@ fn test_hamming_weight() {
     use one_hundred_ninety::one_hundred_ninety_one;
     assert_eq!(one_hundred_ninety_one::hammingWeight(11), 3);
 }
+
+#[test]
+fn test_rob() {
+    use one_hundred_ninety::one_hundred_ninety_eight;
+    assert_eq!(one_hundred_ninety_eight::rob(vec![1, 2, 3, 1]), 4);
+}
