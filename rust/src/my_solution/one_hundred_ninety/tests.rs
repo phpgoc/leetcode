@@ -11,3 +11,9 @@ fn test_reverse_bits() {
         964176192
     );
 }
+
+#[test]
+fn test_hamming_weight() {
+    use one_hundred_ninety::one_hundred_ninety_one;
+    assert_eq!(one_hundred_ninety_one::hammingWeight(11), 3);
+}
