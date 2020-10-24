@@ -3,6 +3,7 @@ pub mod fifty;
 pub mod forty;
 pub mod ninety;
 pub mod one_hundred_eighty;
+pub mod one_hundred_ninety;
 pub mod one_hundred_fifty;
 pub mod one_hundred_forty;
 pub mod one_hundred_seventy;
