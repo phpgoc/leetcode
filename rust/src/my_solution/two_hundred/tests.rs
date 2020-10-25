@@ -17,3 +17,10 @@ fn test_range_bitwise_and() {
     use two_hundred::one;
     assert_eq!(one::range_bitwise_and(5, 7), 4);
 }
+
+#[test]
+fn test_is_happy() {
+    use two_hundred::two;
+    assert!(two::is_happy(19));
+    two::is_happy(2);
+}
