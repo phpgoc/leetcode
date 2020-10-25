@@ -24,3 +24,8 @@ fn test_is_happy() {
     assert!(two::is_happy(19));
     two::is_happy(2);
 }
+#[test]
+fn test_count_primes() {
+    use two_hundred::four;
+    assert_eq!(four::count_primes(10), 4);
+}
