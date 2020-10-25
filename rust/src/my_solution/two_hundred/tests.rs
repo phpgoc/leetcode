@@ -11,3 +11,9 @@ fn test_num_islands() {
 
     assert_eq!(two_hundred::two_hundred::num_islands(grid), 1)
 }
+
+#[test]
+fn test_range_bitwise_and() {
+    use two_hundred::one;
+    assert_eq!(one::range_bitwise_and(5, 7), 4);
+}
