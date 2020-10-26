@@ -63,3 +63,10 @@ fn test_min_sub_array_len() {
     // assert_eq!(nine::min_sub_array_len(7, vec![2, 3, 1, 2, 4, 3]), 2);
     assert_eq!(nine::min_sub_array_len(5, vec![2, 3, 1, 1, 1, 1]), 2);
 }
+
+#[test]
+fn test_find_order() {
+    use two_hundred::ten;
+    ten::find_order(2, vec![vec![1, 0]]);
+    ten::find_order(4, vec![vec![1, 0], vec![2, 0], vec![3, 1], vec![3, 2]]);
+}

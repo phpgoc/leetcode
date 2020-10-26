@@ -7,3 +7,4 @@ pub mod seven;
 mod tests;
 pub mod two;
 pub mod two_hundred;
+pub mod ten;
