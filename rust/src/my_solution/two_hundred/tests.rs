@@ -46,3 +46,14 @@ fn test_is_isomorphic() {
         String::from("title")
     ));
 }
+
+#[test]
+fn test_can_finish() {
+    use two_hundred::seven;
+    assert!(seven::can_finish(2, vec![vec![1, 0]]));
+    assert!(!seven::can_finish(2, vec![vec![1, 0], vec![0, 1]]));
+    assert!(!seven::can_finish(
+        3,
+        vec![vec![1, 0], vec![0, 1], vec![1, 2]]
+    ));
+}
