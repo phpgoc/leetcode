@@ -91,3 +91,12 @@ fn test_rob() {
     assert_eq!(thirteen::rob(vec![1, 2, 3, 1]), 4);
     assert_eq!(thirteen::rob(vec![1, 1, 1, 2]), 3);
 }
+
+#[test]
+fn test_shortest_palindrome() {
+    use two_hundred::fourteen;
+    assert_eq!(
+        fourteen::shortest_palindrome(String::from("aacecaaa")),
+        String::from("aaacecaaa")
+    );
+}
