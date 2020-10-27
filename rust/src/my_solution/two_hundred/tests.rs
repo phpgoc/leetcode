@@ -70,3 +70,16 @@ fn test_find_order() {
     ten::find_order(2, vec![vec![1, 0]]);
     ten::find_order(4, vec![vec![1, 0], vec![2, 0], vec![3, 1], vec![3, 2]]);
 }
+
+#[test]
+fn test_word_dictionary() {
+    use two_hundred::eleven::WordDictionary;
+    let mut word_dictionary = WordDictionary::new();
+    word_dictionary.add_word(String::from("bad"));
+    word_dictionary.add_word(String::from("dad"));
+    word_dictionary.add_word(String::from("mad"));
+    assert!(!word_dictionary.search(String::from("pad"))); // return False
+    assert!(word_dictionary.search(String::from("bad"))); // return True
+    assert!(word_dictionary.search(String::from(".ad"))); // return True
+    assert!(word_dictionary.search(String::from("b.."))); // return True
+}
