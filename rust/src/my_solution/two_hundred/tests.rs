@@ -83,3 +83,11 @@ fn test_word_dictionary() {
     assert!(word_dictionary.search(String::from(".ad"))); // return True
     assert!(word_dictionary.search(String::from("b.."))); // return True
 }
+
+#[test]
+fn test_rob() {
+    use two_hundred::thirteen;
+    assert_eq!(thirteen::rob(vec![2, 3, 2]), 3);
+    assert_eq!(thirteen::rob(vec![1, 2, 3, 1]), 4);
+    assert_eq!(thirteen::rob(vec![1, 1, 1, 2]), 3);
+}
