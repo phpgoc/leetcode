@@ -109,3 +109,14 @@ fn test_find_kth_largest() {
         4
     );
 }
+
+#[test]
+fn test_combination_sum3() {
+    use two_hundred::seventeen;
+    let expect = vec![vec![1, 2, 6], vec![1, 3, 5], vec![2, 3, 4]];
+    let result = seventeen::combination_sum3(3, 9);
+    assert_eq!(expect.len(), result.len());
+    for i in result {
+        assert!(expect.contains(&i));
+    }
+}
