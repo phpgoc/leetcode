@@ -120,3 +120,10 @@ fn test_combination_sum3() {
         assert!(expect.contains(&i));
     }
 }
+
+#[test]
+fn test_contains_duplicate() {
+    use two_hundred::eighteen;
+    assert!(eighteen::contains_duplicate(vec![1, 2, 3, 1]));
+    assert!(!eighteen::contains_duplicate(vec![1, 2, 3, 4]));
+}
