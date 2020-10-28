@@ -100,3 +100,12 @@ fn test_shortest_palindrome() {
         String::from("aaacecaaa")
     );
 }
+#[test]
+fn test_find_kth_largest() {
+    use two_hundred::fifteen;
+    assert_eq!(fifteen::find_kth_largest(vec![3, 2, 1, 5, 6, 4], 2), 5);
+    assert_eq!(
+        fifteen::find_kth_largest(vec![3, 2, 3, 1, 2, 4, 5, 5, 6], 4),
+        4
+    );
+}
