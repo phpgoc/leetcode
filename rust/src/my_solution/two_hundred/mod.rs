@@ -1,4 +1,3 @@
-pub mod eighteen;
 pub mod eleven;
 pub mod fifteen;
 pub mod five;
@@ -8,6 +7,7 @@ pub mod nine;
 pub mod one;
 pub mod seven;
 pub mod seventeen;
+pub mod sixteen;
 pub mod ten;
 #[cfg(test)]
 mod tests;
