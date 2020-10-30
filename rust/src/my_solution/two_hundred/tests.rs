@@ -127,3 +127,9 @@ fn test_contains_duplicate() {
     assert!(seventeen::contains_duplicate(vec![1, 2, 3, 1]));
     assert!(!seventeen::contains_duplicate(vec![1, 2, 3, 4]));
 }
+
+#[test]
+fn contains_nearby_duplicate() {
+    use two_hundred::nineteen;
+    assert!(nineteen::contains_nearby_duplicate(vec![1, 2, 3, 1], 3));
+}
