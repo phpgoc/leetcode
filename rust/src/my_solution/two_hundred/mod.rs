@@ -13,5 +13,6 @@ pub mod ten;
 #[cfg(test)]
 mod tests;
 pub mod thirteen;
+pub mod twenty;
 pub mod two;
 pub mod two_hundred;
