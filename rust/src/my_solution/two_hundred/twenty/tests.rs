@@ -37,3 +37,9 @@ fn compute_area() {
     assert_eq!(three::compute_area(-2, -2, 2, 2, -1, -1, 1, 1), 16);
     assert_eq!(three::compute_area(-2, -2, 2, 2, -2, 2, 2, 4), 24);
 }
+#[test]
+fn calculate() {
+    use twenty::four;
+    assert_eq!(four::calculate(String::from("1 +1")), 2);
+    assert_eq!(four::calculate(String::from("(1+(4+5+2)-3)+(6+8)")), 23);
+}
