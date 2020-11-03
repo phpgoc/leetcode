@@ -43,3 +43,13 @@ fn calculate() {
     assert_eq!(four::calculate(String::from("1 +1")), 2);
     assert_eq!(four::calculate(String::from("(1+(4+5+2)-3)+(6+8)")), 23);
 }
+
+#[test]
+fn calculate2() {
+    use twenty::seven;
+    assert_eq!(seven::calculate(String::from("0")), 0);
+    assert_eq!(seven::calculate(String::from("1 *2")), 2);
+    assert_eq!(seven::calculate(String::from("3/2")), 1);
+    assert_eq!(seven::calculate(String::from(" 3+5 / 2")),5);
+    assert_eq!(seven::calculate(String::from(" 3+5 / 2*3")),9);
+}
