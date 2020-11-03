@@ -53,3 +53,10 @@ fn calculate2() {
     assert_eq!(seven::calculate(String::from(" 3+5 / 2")),5);
     assert_eq!(seven::calculate(String::from(" 3+5 / 2*3")),9);
 }
+
+#[test]
+fn summary_ranges() {
+    use twenty::eight;
+    assert_eq!(eight::summary_ranges(vec![0,1,2,4,5,7]),
+    vec![String::from("0->2"),String::from("4->5"),String::from("7")]);
+}
