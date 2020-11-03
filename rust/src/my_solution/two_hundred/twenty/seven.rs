@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 ///实现一个基本的计算器来计算一个简单的字符串表达式的值。
 //
 // 字符串表达式仅包含非负整数，+， - ，*，/ 四种运算符和空格  。 整数除法仅保留整数部分。
@@ -29,9 +27,9 @@ pub fn calculate(s: String) -> i32 {
     stack_number.push(cur_number_str.parse::<i32>().unwrap());
     // println!("{:?}",stack_number);
     // println!("{:?}",stack_symbol);
-    let mut map = HashMap::new();
+    let mut map = vec![];
     for i in 0..chars.len(){
-        map.insert(i,i);
+        map.push(i);
     }
     let mut val = 0;
     for (k,v) in stack_symbol.iter().enumerate(){
@@ -43,10 +41,9 @@ pub fn calculate(s: String) -> i32 {
                 }else{
                     val = stack_number[k] / stack_number[k+1];
                 }
-                let map_val = *map.get(&k).unwrap();
-                map.insert(k+1,map_val );
+                map[k+1] = map[k];
                 stack_number[k+1] = val;
-                stack_number[map_val] = val;
+                stack_number[map[k]] = val;
             }
             _ =>{}
         }
