@@ -13,3 +13,8 @@ fn count_digit_one() {
     assert_eq!(three::count_digit_one(13),6);
     assert_eq!(three::count_digit_one(301203),250645);
 }
+#[test]
+fn product_except_self() {
+    use thirty::eight;
+    assert_eq!(eight::product_except_self(vec![1,2,3,4]),vec![24,12,8,6]);
+}
