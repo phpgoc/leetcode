@@ -18,3 +18,10 @@ fn product_except_self() {
     use thirty::eight;
     assert_eq!(eight::product_except_self(vec![1,2,3,4]),vec![24,12,8,6]);
 }
+
+#[test]
+fn max_sliding_window() {
+    use thirty::nine;
+    assert_eq!(nine::max_sliding_window(vec![1,3,-1,-3,5,3,6,7],3),vec![3,3,5,5,6,7]);
+    assert_eq!(nine::max_sliding_window(vec![9,10,9,-7,-4,-8,2,-6],5),vec![10,10,9,2]);
+}
