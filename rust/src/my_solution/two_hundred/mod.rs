@@ -3,6 +3,7 @@ pub mod fifteen;
 pub mod five;
 pub mod four;
 pub mod fourteen;
+pub mod fourty;
 pub mod nine;
 pub mod nineteen;
 pub mod one;
@@ -13,7 +14,7 @@ pub mod ten;
 #[cfg(test)]
 mod tests;
 pub mod thirteen;
+pub mod thirty;
 pub mod twenty;
 pub mod two;
 pub mod two_hundred;
-pub mod thirty;

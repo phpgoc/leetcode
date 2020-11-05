@@ -12,28 +12,28 @@
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 pub fn summary_ranges(nums: Vec<i32>) -> Vec<String> {
     let mut res = vec![];
-    if nums.len() == 0{
+    if nums.len() == 0 {
         return res;
     }
     let mut min = nums[0];
     let mut max = nums[0];
-    for &i in nums[1..].iter(){
-        if i!=max+1{
-            if min==max{
+    for &i in nums[1..].iter() {
+        if i != max + 1 {
+            if min == max {
                 res.push(min.to_string());
-            }else{
-                res.push(format!("{}->{}",min,max));
+            } else {
+                res.push(format!("{}->{}", min, max));
             }
-            min =i;
-            max =i;
-        }else{
+            min = i;
+            max = i;
+        } else {
             max = i;
         }
     }
-    if min==max{
+    if min == max {
         res.push(min.to_string());
-    }else{
-        res.push(format!("{}->{}",min,max));
+    } else {
+        res.push(format!("{}->{}", min, max));
     }
     res
 }

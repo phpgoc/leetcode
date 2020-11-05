@@ -11,47 +11,49 @@ pub fn majority_element(nums: Vec<i32>) -> Vec<i32> {
     let k = 2;
     let len = nums.len();
     let mut res = vec![];
-    if len == 0{return res;}
-    let mut cands_cnts = vec![(nums[0],0);k];
+    if len == 0 {
+        return res;
+    }
+    let mut cands_cnts = vec![(nums[0], 0); k];
 
     //第1阶段 成对抵销
-    'outer :for &i in &nums{
-        for j in 0..k{
-            if cands_cnts[j].0 == i{
-                cands_cnts[j].1 +=1;
+    'outer: for &i in &nums {
+        for j in 0..k {
+            if cands_cnts[j].0 == i {
+                cands_cnts[j].1 += 1;
                 continue 'outer;
             }
         }
         let mut flag = true;
-        for j in 0..k{
-            if cands_cnts[j].1 == 0{
-                cands_cnts[j] = (i,1);
+        for j in 0..k {
+            if cands_cnts[j].1 == 0 {
+                cands_cnts[j] = (i, 1);
                 flag = false;
                 break;
             }
         }
-        if flag{
-            for j in 0..k{
-                cands_cnts[j].1 -=1;
+        if flag {
+            for j in 0..k {
+                cands_cnts[j].1 -= 1;
             }
         }
     }
-    for j in 0..k{
+    for j in 0..k {
         cands_cnts[j].1 = 0;
     }
 
     for &i in &nums {
-        for j in 0..k{
-            if i==cands_cnts[j].0{
-                cands_cnts[j].1 +=1;
+        for j in 0..k {
+            if i == cands_cnts[j].0 {
+                cands_cnts[j].1 += 1;
                 break;
             }
         }
     }
     // println!("cands_cnts = {:?}",cands_cnts);
-    
-    for i in cands_cnts{
-        if i.1>len/(k+1){
+
+    for i in cands_cnts {
+        if i.1 > len / (k + 1) {
             res.push(i.0);
         }
     }
@@ -64,8 +66,8 @@ pub fn majority_element_use_counter(nums: Vec<i32>) -> Vec<i32> {
     let counter = nums.iter().collect::<Counter<_>>();
     // println!("most_common = {:?}",counter.most_common());
     let mut res = vec![];
-    for i in counter.most_common(){
-        if i.1 > nums.len()/(k+1){
+    for i in counter.most_common() {
+        if i.1 > nums.len() / (k + 1) {
             res.push(*i.0);
         }
     }

@@ -50,34 +50,48 @@ fn calculate2() {
     assert_eq!(seven::calculate(String::from("0")), 0);
     assert_eq!(seven::calculate(String::from("1 *2")), 2);
     assert_eq!(seven::calculate(String::from("3/2")), 1);
-    assert_eq!(seven::calculate(String::from(" 3+5 / 2")),5);
-    assert_eq!(seven::calculate(String::from(" 3+5 / 2*3")),9);
+    assert_eq!(seven::calculate(String::from(" 3+5 / 2")), 5);
+    assert_eq!(seven::calculate(String::from(" 3+5 / 2*3")), 9);
 }
 
 #[test]
 fn summary_ranges() {
     use twenty::eight;
-    assert_eq!(eight::summary_ranges(vec![0,1,2,4,5,7]),
-    vec![String::from("0->2"),String::from("4->5"),String::from("7")]);
+    assert_eq!(
+        eight::summary_ranges(vec![0, 1, 2, 4, 5, 7]),
+        vec![
+            String::from("0->2"),
+            String::from("4->5"),
+            String::from("7")
+        ]
+    );
 }
 
 #[test]
 fn majority_element() {
-    use twenty::nine;
     use rand::prelude::*;
+    use twenty::nine;
     let mut rng = rand::thread_rng();
     let mut vec = vec![];
-    for _ in 0..10{
-        let max = rng.gen_range(3,6);
-        for _ in 0..100{
-            vec.push(rng.gen_range(1,max));
+    for _ in 0..10 {
+        let max = rng.gen_range(3, 6);
+        for _ in 0..100 {
+            vec.push(rng.gen_range(1, max));
         }
-        assert_eq!(nine::majority_element(vec.clone()),nine::majority_element_use_counter(vec.clone()));
+        assert_eq!(
+            nine::majority_element(vec.clone()),
+            nine::majority_element_use_counter(vec.clone())
+        );
         vec.clear();
     }
-    let vec  = vec![1,1,2,2,2,3,3,4];
-    assert_eq!(nine::majority_element(vec.clone()),nine::majority_element_use_counter(vec.clone()));
-    let vec = vec![4,5,3,4,4,1,0,-1,-2,4,6,7,8,4];
-    assert_eq!(nine::majority_element(vec.clone()),nine::majority_element_use_counter(vec.clone()));
-
+    let vec = vec![1, 1, 2, 2, 2, 3, 3, 4];
+    assert_eq!(
+        nine::majority_element(vec.clone()),
+        nine::majority_element_use_counter(vec.clone())
+    );
+    let vec = vec![4, 5, 3, 4, 4, 1, 0, -1, -2, 4, 6, 7, 8, 4];
+    assert_eq!(
+        nine::majority_element(vec.clone()),
+        nine::majority_element_use_counter(vec.clone())
+    );
 }

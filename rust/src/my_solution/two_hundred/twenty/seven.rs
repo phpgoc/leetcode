@@ -8,12 +8,12 @@ pub fn calculate(s: String) -> i32 {
     let mut stack_number = vec![];
     let mut stack_symbol = vec![]; // * - /
 
-    for i in &chars{
+    for i in &chars {
         match i {
-            '0'..='9' =>{
+            '0'..='9' => {
                 cur_number_str.push(*i);
             }
-            '+'| '-' |'*' | '/'  => {
+            '+' | '-' | '*' | '/' => {
                 stack_number.push(cur_number_str.parse::<i32>().unwrap());
                 cur_number_str.clear();
                 stack_symbol.push(*i);
@@ -28,36 +28,35 @@ pub fn calculate(s: String) -> i32 {
     // println!("{:?}",stack_number);
     // println!("{:?}",stack_symbol);
     let mut map = vec![];
-    for i in 0..chars.len(){
+    for i in 0..chars.len() {
         map.push(i);
     }
     let mut val = 0;
-    for (k,v) in stack_symbol.iter().enumerate(){
+    for (k, v) in stack_symbol.iter().enumerate() {
         match v {
-            '*' |'/' => {
-
-                if *v == '*'{
-                    val = stack_number[k] * stack_number[k+1];
-                }else{
-                    val = stack_number[k] / stack_number[k+1];
+            '*' | '/' => {
+                if *v == '*' {
+                    val = stack_number[k] * stack_number[k + 1];
+                } else {
+                    val = stack_number[k] / stack_number[k + 1];
                 }
-                map[k+1] = map[k];
-                stack_number[k+1] = val;
+                map[k + 1] = map[k];
+                stack_number[k + 1] = val;
                 stack_number[map[k]] = val;
             }
-            _ =>{}
+            _ => {}
         }
     }
     let mut res = stack_number[0];
-    for (k,v) in stack_symbol.iter().enumerate(){
+    for (k, v) in stack_symbol.iter().enumerate() {
         match v {
             '+' => {
-                res+= stack_number[k+1];
+                res += stack_number[k + 1];
             }
-            '-' =>{
-                res-= stack_number[k+1];
+            '-' => {
+                res -= stack_number[k + 1];
             }
-            _ =>{}
+            _ => {}
         }
     }
     res
