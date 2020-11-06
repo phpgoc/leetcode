@@ -22,3 +22,14 @@ fn search_matrix() {
         15
     ));
 }
+
+#[test]
+fn diff_ways_to_compute() {
+    use super::one;
+    let result = one::diff_ways_to_compute(String::from("2*3-4*5"));
+    let expect = vec![-34, -14, -10, -10, 10];
+    assert_eq!(result.len(), expect.len());
+    for i in expect {
+        assert!(result.contains(&i));
+    }
+}
