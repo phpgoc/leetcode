@@ -33,3 +33,12 @@ fn diff_ways_to_compute() {
         assert!(result.contains(&i));
     }
 }
+
+#[test]
+fn is_anagram() {
+    use super::two;
+    assert!(two::is_anagram(
+        String::from("anagram"),
+        String::from("nagaram")
+    ));
+}
