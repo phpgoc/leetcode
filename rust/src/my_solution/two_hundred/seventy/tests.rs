@@ -31,3 +31,9 @@ fn first_bad_version() {
     let s = eight::Solution { v: 10 };
     assert_eq!(s.first_bad_version(30), 10);
 }
+
+#[test]
+fn num_squares() {
+    use super::nine;
+    assert_eq!(nine::num_squares(12), 3);
+}
