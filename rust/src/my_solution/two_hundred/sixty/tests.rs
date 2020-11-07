@@ -20,7 +20,7 @@ fn is_ugly() {
 fn nth_ugly_number() {
     use super::four;
     assert_eq!(four::nth_ugly_number(10), 12);
-    println!("{:?}", four::nth_ugly_number(1690));
+    // println!("{:?}", four::nth_ugly_number(1690));
 }
 
 #[test]
