@@ -15,3 +15,10 @@ fn is_ugly() {
     assert!(three::is_ugly(6));
     assert!(!three::is_ugly(17));
 }
+
+#[test]
+fn nth_ugly_number() {
+    use super::four;
+    assert_eq!(four::nth_ugly_number(10), 12);
+    println!("{:?}", four::nth_ugly_number(1690));
+}
