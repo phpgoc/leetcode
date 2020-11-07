@@ -24,3 +24,10 @@ fn h_index2() {
     assert_eq!(five::h_index(vec![0, 1, 3, 5, 6]), 3);
     assert_eq!(five::h_index(vec![0, 1, 3, 4, 5, 7, 6,]), 4);
 }
+
+#[test]
+fn first_bad_version() {
+    use super::eight;
+    let s = eight::Solution { v: 10 };
+    assert_eq!(s.first_bad_version(30), 10);
+}
