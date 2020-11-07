@@ -22,3 +22,10 @@ fn nth_ugly_number() {
     assert_eq!(four::nth_ugly_number(10), 12);
     println!("{:?}", four::nth_ugly_number(1690));
 }
+
+#[test]
+fn missing_number() {
+    use super::eight;
+    assert_eq!(eight::missing_number(vec![3, 0, 1]), 2);
+    assert_eq!(eight::missing_number(vec![9, 6, 4, 2, 3, 5, 7, 0, 1]), 8);
+}
