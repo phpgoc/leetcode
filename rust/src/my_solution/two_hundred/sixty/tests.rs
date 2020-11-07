@@ -8,3 +8,10 @@ fn single_number() {
         assert!(result.contains(&i));
     }
 }
+
+#[test]
+fn is_ugly() {
+    use super::three;
+    assert!(three::is_ugly(6));
+    assert!(!three::is_ugly(17));
+}
