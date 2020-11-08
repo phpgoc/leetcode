@@ -16,3 +16,42 @@ fn find_duplicate() {
     assert_eq!(seven::find_duplicate(vec![1, 3, 4, 2, 2]), 2);
     assert_eq!(seven::find_duplicate(vec![3, 1, 3, 4, 2]), 3);
 }
+
+#[test]
+fn game_of_life() {
+    use super::nine;
+    let mut input = vec![vec![0, 1, 0], vec![0, 0, 1], vec![1, 1, 1], vec![0, 0, 0]];
+    nine::game_of_life(&mut input);
+    assert_eq!(
+        input,
+        vec![vec![0, 0, 0], vec![1, 0, 1], vec![0, 1, 1], vec![0, 1, 0]]
+    );
+    let mut input1 = vec![
+        vec![1],
+        vec![0],
+        vec![0],
+        vec![1],
+        vec![0],
+        vec![0],
+        vec![1],
+        vec![0],
+        vec![0],
+        vec![1],
+    ];
+    nine::game_of_life(&mut input1);
+    assert_eq!(
+        input1,
+        vec![
+            vec![0],
+            vec![0],
+            vec![0],
+            vec![0],
+            vec![0],
+            vec![0],
+            vec![0],
+            vec![0],
+            vec![0],
+            vec![0]
+        ]
+    );
+}
