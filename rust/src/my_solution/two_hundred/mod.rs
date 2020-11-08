@@ -1,3 +1,4 @@
+pub mod eighty;
 pub mod eleven;
 pub mod fifteen;
 pub mod fifty;
