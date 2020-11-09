@@ -6,3 +6,9 @@ fn word_pattern() {
         String::from("dog cat cat dog")
     ));
 }
+
+#[test]
+fn can_win_nim() {
+    use super::one;
+    assert!(!one::can_win_nim(4));
+}

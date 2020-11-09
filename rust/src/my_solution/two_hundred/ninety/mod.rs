@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-
+pub mod one;
 #[cfg(test)]
 mod tests;
 ///给定一种规律 pattern 和一个字符串 str ，判断 str 是否遵循相同的规律。
