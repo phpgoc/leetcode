@@ -8,6 +8,7 @@ pub mod fourteen;
 pub mod fourty;
 pub mod nine;
 pub mod nineteen;
+pub mod ninety;
 pub mod one;
 pub mod seven;
 pub mod seventeen;
