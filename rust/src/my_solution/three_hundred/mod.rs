@@ -1,0 +1,56 @@
+pub fn length_of_lis(nums: Vec<i32>) -> i32 {
+    let len = nums.len();
+    let mut dp = vec![1; len];
+    for i in 0..len {
+        for j in 0..i {
+            if nums[j] < nums[i] {
+                dp[i] = dp[i].max(dp[j] + 1);
+            }
+        }
+    }
+    let mut res = 0;
+    for i in dp {
+        res = res.max(i);
+    }
+    res
+}
+mod use_greed {
+    pub fn length_of_lis(nums: Vec<i32>) -> i32 {
+        let mut dp = vec![];
+        let mut res = 0;
+        'a: for i in nums {
+            if dp.is_empty() || dp[dp.len() - 1] < i {
+                dp.push(i);
+                res += 1;
+            } else {
+                let mut l = 0;
+                let mut r = dp.len() - 1;
+                while l < r {
+                    let mid = l + (r - l) / 2;
+                    if dp[mid] > i {
+                        r = mid;
+                    } else if dp[mid] < i {
+                        l = mid + 1;
+                    } else {
+                        continue 'a;
+                    }
+                }
+                dp[l] = i;
+            }
+        }
+        res
+    }
+}
+#[cfg(test)]
+mod tests {
+
+    #[test]
+    fn length_of_lis() {
+        use super::*;
+        assert_eq!(length_of_lis(vec![10, 9, 2, 5, 3, 7, 101, 18]), 4);
+        assert_eq!(
+            use_greed::length_of_lis(vec![10, 9, 2, 5, 3, 7, 101, 18]),
+            4
+        );
+    }
+}

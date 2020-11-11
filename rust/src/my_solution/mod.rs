@@ -15,5 +15,6 @@ pub mod seventy;
 pub mod sixty;
 pub mod ten;
 pub mod thirty;
+pub mod three_hundred;
 pub mod twenty;
 pub mod two_hundred;
