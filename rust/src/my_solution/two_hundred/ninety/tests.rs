@@ -23,7 +23,8 @@ fn MedianFinder() {
     // m.add_num(1);
     // m.add_num(2);
     // assert_eq!(m.find_median(), 2.0);
-    use five::use_btree_map::MedianFinder;
+    // use five::use_btree_map::MedianFinder;
+    use five::use_insertion::MedianFinder;
 
     let mut m3 = MedianFinder::new();
     let vec = vec![
@@ -42,6 +43,7 @@ fn MedianFinder() {
 
     let mut mm1 = five::MedianFinder::new();
     let mut mm2 = MedianFinder::new();
+    let mut mm3 = five::use_insertion::MedianFinder::new();
     let vec = vec![
         8, 51, 58, 58, 29, 80, 34, 29, 40, 35, 35, 16, 50, 37, 90, 98, 59, 93, 85, 14, 1, 83, 06,
         49, 71, 74, 30, 22, 17, 59, 06, 00, 96, 29, 50, 11, 16, 71, 8, 19, 32, 29, 01, 18, 3, 68,
@@ -75,7 +77,10 @@ fn MedianFinder() {
     for i in vec {
         mm1.add_num(i);
         mm2.add_num(i);
+        mm3.add_num(i);
+
         assert_eq!(mm1.find_median(), mm2.find_median());
+        assert_eq!(mm1.find_median(), mm3.find_median());
     }
 }
 
