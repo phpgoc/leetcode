@@ -78,3 +78,16 @@ fn MedianFinder() {
         assert_eq!(mm1.find_median(), mm2.find_median());
     }
 }
+
+#[test]
+fn get_hint() {
+    use super::nine;
+    assert_eq!(
+        nine::get_hint(String::from("1807"), String::from("7810")),
+        String::from("1A3B")
+    );
+    assert_eq!(
+        nine::get_hint(String::from("11"), String::from("11")),
+        String::from("2A0B")
+    );
+}

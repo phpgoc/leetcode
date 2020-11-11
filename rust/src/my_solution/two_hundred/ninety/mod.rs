@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 pub mod five;
+pub mod nine;
 pub mod one;
 #[cfg(test)]
 mod tests;
