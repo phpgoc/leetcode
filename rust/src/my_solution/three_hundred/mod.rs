@@ -1,3 +1,4 @@
+pub mod three;
 pub fn length_of_lis(nums: Vec<i32>) -> i32 {
     let len = nums.len();
     let mut dp = vec![1; len];
@@ -42,15 +43,4 @@ mod use_greed {
     }
 }
 #[cfg(test)]
-mod tests {
-
-    #[test]
-    fn length_of_lis() {
-        use super::*;
-        assert_eq!(length_of_lis(vec![10, 9, 2, 5, 3, 7, 101, 18]), 4);
-        assert_eq!(
-            use_greed::length_of_lis(vec![10, 9, 2, 5, 3, 7, 101, 18]),
-            4
-        );
-    }
-}
+mod tests;
