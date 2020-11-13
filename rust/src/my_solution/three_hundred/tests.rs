@@ -40,3 +40,14 @@ fn is_additive_number() {
     assert!(six::is_additive_number(String::from("000")));
     assert!(!six::is_additive_number(String::from("199001200")));
 }
+
+#[test]
+fn num_array2() {
+    use super::seven;
+    let mut model = seven::NumArray::new(vec![-2, 0, 3, -5, 2, -1]);
+    assert_eq!(model.sum_range(0, 2), 1);
+    assert_eq!(model.sum_range(2, 5), -1);
+    assert_eq!(model.sum_range(0, 5), -3);
+    model.update(0, 1);
+    assert_eq!(model.sum_range(0, 5), 0);
+}
