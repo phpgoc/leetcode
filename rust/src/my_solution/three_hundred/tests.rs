@@ -51,3 +51,9 @@ fn num_array2() {
     model.update(0, 1);
     assert_eq!(model.sum_range(0, 5), 0);
 }
+
+#[test]
+fn max_profit() {
+    use super::nine;
+    assert_eq!(nine::max_profit(vec![1, 2, 3, 0, 2]), 3);
+}
