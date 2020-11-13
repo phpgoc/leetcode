@@ -31,3 +31,12 @@ fn num_matrix() {
     assert_eq!(model.sum_region(1, 1, 2, 2), 11);
     assert_eq!(model.sum_region(1, 2, 2, 4), 12);
 }
+
+#[test]
+fn is_additive_number() {
+    use super::six;
+    assert!(six::is_additive_number(String::from("112358")));
+    assert!(six::is_additive_number(String::from("199100199")));
+    assert!(six::is_additive_number(String::from("000")));
+    assert!(!six::is_additive_number(String::from("199001200")));
+}
