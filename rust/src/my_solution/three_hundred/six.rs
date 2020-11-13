@@ -30,13 +30,13 @@ pub fn is_additive_number(num: String) -> bool {
 }
 
 fn dfs(str_len: usize, from: usize, stack: &mut Vec<i64>, num: &String) -> bool {
-    println!(
-        "stack = {:?} from = {},num.len() = {},str_len ={}",
-        stack,
-        from,
-        num.len(),
-        str_len
-    );
+    // println!(
+    //     "stack = {:?} from = {},num.len() = {},str_len ={}",
+    //     stack,
+    //     from,
+    //     num.len(),
+    //     str_len
+    // );
 
     if from == num.len() {
         return true;
