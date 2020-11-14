@@ -57,3 +57,20 @@ fn max_profit() {
     use super::nine;
     assert_eq!(nine::max_profit(vec![1, 2, 3, 0, 2]), 3);
 }
+
+#[test]
+fn remove_duplicate_letters() {
+    use super::sixteen;
+    assert_eq!(
+        sixteen::remove_duplicate_letters(String::from("cbacdcbc")),
+        String::from("acdb")
+    );
+    assert_eq!(
+        sixteen::remove_duplicate_letters(String::from("ecbacba")),
+        String::from("eacb")
+    );
+    assert_eq!(
+        sixteen::remove_duplicate_letters(String::from("leetcode")),
+        String::from("letcod")
+    );
+}
