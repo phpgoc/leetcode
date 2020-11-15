@@ -74,3 +74,17 @@ fn remove_duplicate_letters() {
         String::from("letcod")
     );
 }
+
+#[test]
+fn max_product() {
+    use super::eighteen;
+    assert_eq!(
+        eighteen::max_product(
+            ["abcw", "baz", "foo", "bar", "xtfn", "abcdef"]
+                .iter()
+                .map(|r| r.to_string())
+                .collect()
+        ),
+        16
+    )
+}
