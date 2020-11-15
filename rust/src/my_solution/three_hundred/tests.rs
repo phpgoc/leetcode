@@ -88,3 +88,9 @@ fn max_product() {
         16
     )
 }
+#[test]
+fn bulb_switch() {
+    use super::nineteen;
+    assert_eq!(nineteen::bulb_switch(3), 1);
+    assert_eq!(nineteen::bulb_switch(99999999), 9999);
+}
