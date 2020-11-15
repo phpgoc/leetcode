@@ -6,6 +6,7 @@ pub mod seven;
 pub mod six;
 pub mod sixteen;
 pub mod three;
+pub mod twenty;
 pub fn length_of_lis(nums: Vec<i32>) -> i32 {
     let len = nums.len();
     let mut dp = vec![1; len];
