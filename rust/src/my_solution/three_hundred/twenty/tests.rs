@@ -36,3 +36,11 @@ fn is_power_of_three() {
     assert!(six::is_power_of_three(3));
     assert!(six::is_power_of_three(1162261467));
 }
+#[test]
+fn longest_increasing_path() {
+    use super::nine;
+    assert_eq!(
+        nine::longest_increasing_path(vec![vec![9, 9, 4], vec![6, 6, 8], vec![2, 1, 1]]),
+        4
+    );
+}
