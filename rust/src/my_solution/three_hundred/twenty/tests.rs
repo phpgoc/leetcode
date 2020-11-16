@@ -30,3 +30,9 @@ fn wiggle_sort() {
         factor *= -1;
     }
 }
+#[test]
+fn is_power_of_three() {
+    use super::six;
+    assert!(six::is_power_of_three(3));
+    assert!(six::is_power_of_three(1162261467));
+}
