@@ -32,25 +32,10 @@ fn dfs(y: usize, x: usize, matrix_add_0: &Vec<Vec<i32>>, dp: &mut Vec<Vec<i32>>)
         return dp[y - 1][x - 1];
     }
     let mut res = 1;
-    let dir = [(0, -1), (0, 1), (-1, 0), (1, 0)];
+    let dir = [(0, std::usize::MAX), (0, 1), (std::usize::MAX, 0), (1, 0)];
     for &i in dir.iter() {
-        // println!(
-        //     "y = {} x = {}, i = {:?},{:?}",
-        //     y,
-        //     x,
-        //     i,
-        //     matrix_add_0[(y as i32 + i.0) as usize][(x as i32 + i.1) as usize]
-        // );
-
-        if matrix_add_0[(y as i32 + i.0) as usize][(x as i32 + i.1) as usize] > matrix_add_0[y][x] {
-            res = res.max(
-                dfs(
-                    (y as i32 + i.0) as usize,
-                    (x as i32 + i.1) as usize,
-                    matrix_add_0,
-                    dp,
-                ) + 1,
-            );
+        if matrix_add_0[i.0.wrapping_add(y)][i.1.wrapping_add(x)] > matrix_add_0[y][x] {
+            res = res.max(dfs(i.0.wrapping_add(y), i.1.wrapping_add(x), matrix_add_0, dp) + 1);
         }
     }
     dp[y - 1][x - 1] = res;
