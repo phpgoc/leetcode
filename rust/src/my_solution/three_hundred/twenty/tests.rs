@@ -18,3 +18,15 @@ fn coin_change() {
     assert_eq!(two::coin_change(vec![1, 2, 5], 11), 3);
     assert_eq!(two::coin_change(vec![186, 419, 83, 408], 6249), 20);
 }
+
+#[test]
+fn wiggle_sort() {
+    use super::four;
+    let mut input = vec![1, 5, 1, 1, 6, 4];
+    four::wiggle_sort(&mut input);
+    let mut factor = 1;
+    for i in 1..input.len() {
+        assert!((input[i] - input[i - 1]) * factor > 0);
+        factor *= -1;
+    }
+}
