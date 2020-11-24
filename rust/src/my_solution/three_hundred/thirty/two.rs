@@ -4,15 +4,10 @@ use std::collections::HashMap;
 pub fn find_itinerary(tickets: Vec<Vec<String>>) -> Vec<String> {
     let mut res = vec![];
     let mut map: HashMap<String, Vec<String>> = HashMap::new();
-    for i in tickets.iter() {
-        match map.get_mut(&i[0]) {
-            Some(t) => {
-                t.push(i[1].clone());
-            }
-            None => {
-                map.insert(i[0].clone(), vec![i[1].clone()]);
-            }
-        }
+    for t in 0..tickets.len() {
+        map.entry(tickets[t][0].clone())
+            .or_default()
+            .push(tickets[t][1].clone());
     }
     for i in map.iter_mut() {
         i.1.sort_by(|a, b| b.cmp(a));
