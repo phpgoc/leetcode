@@ -39,3 +39,9 @@ fn find_itinerary() {
     ];
     assert_eq!(res, expect);
 }
+
+#[test]
+fn increasing_triplet() {
+    use super::four;
+    assert!(four::increasing_triplet(vec![1, 2, 3, 4, 5]));
+}
