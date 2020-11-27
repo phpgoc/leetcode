@@ -129,3 +129,9 @@ fn palindrome_pairs() {
         assert!(expect.contains(&i));
     }
 }
+
+#[test]
+fn count_bits() {
+    use super::eight;
+    assert_eq!(eight::count_bits(5), vec![0, 1, 1, 2, 1, 2]);
+}

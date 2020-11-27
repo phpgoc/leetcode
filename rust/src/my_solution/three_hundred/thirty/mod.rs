@@ -1,5 +1,6 @@
-pub mod six;
+pub mod eight;
 pub mod four;
+pub mod six;
 #[cfg(test)]
 mod tests;
 pub mod two;

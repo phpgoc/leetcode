@@ -18,7 +18,7 @@ pub fn palindrome_pairs(words: Vec<String>) -> Vec<Vec<i32>> {
             continue;
         }
         let mut reverse1 = words[k].clone().chars().rev().collect::<String>();
-        let mut reverse2 = words[k].clone().chars().rev().collect::<String>();
+        let mut reverse2 = reverse1.clone();
         reverse2.pop();
         let this_str_len = chars.len();
         let mut i = 1;
