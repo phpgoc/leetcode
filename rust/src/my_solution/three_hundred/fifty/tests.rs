@@ -20,3 +20,26 @@ fn summary_ranges() {
     m.add_num(6);
     println!("{:?}", m.get_intervals());
 }
+
+#[test]
+fn max_envelopes() {
+    use super::four;
+    assert_eq!(
+        four::max_envelopes(vec![vec![5, 4], vec![6, 4], vec![6, 7], vec![2, 3]]),
+        3
+    );
+    assert_eq!(
+        four::max_envelopes(vec![
+            vec![2, 100],
+            vec![3, 200],
+            vec![4, 300],
+            vec![5, 500],
+            vec![5, 400],
+            vec![5, 250],
+            vec![6, 370],
+            vec![6, 360],
+            vec![7, 380]
+        ]),
+        5
+    );
+}
