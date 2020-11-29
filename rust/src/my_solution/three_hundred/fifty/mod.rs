@@ -1,5 +1,6 @@
 #[cfg(test)]
 mod tests;
+pub mod two;
 ///给定两个数组，编写一个函数来计算它们的交集。
 pub fn intersect(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
     let mut res = vec![];
