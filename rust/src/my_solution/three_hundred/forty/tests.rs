@@ -35,3 +35,10 @@ fn top_k_frequent() {
         assert!(expect.contains(&i));
     }
 }
+#[test]
+fn intersection() {
+    use super::nine;
+    let res = nine::intersection(vec![1, 2, 2, 1], vec![2, 2]);
+    let expect = vec![2];
+    assert_eq!(res, expect);
+}
