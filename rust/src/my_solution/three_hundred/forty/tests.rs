@@ -16,3 +16,11 @@ fn reverse_string() {
     four::reverse_string(&mut input);
     assert_eq!(input, ['o', 'l', 'l', 'e', 'h'].to_vec());
 }
+#[test]
+fn reverse_vowels() {
+    use super::five;
+    assert_eq!(
+        five::reverse_vowels(String::from("hello")),
+        String::from("holle")
+    );
+}
