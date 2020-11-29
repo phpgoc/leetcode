@@ -24,3 +24,14 @@ fn reverse_vowels() {
         String::from("holle")
     );
 }
+
+#[test]
+fn top_k_frequent() {
+    use super::seven;
+    let res = seven::top_k_frequent([1, 1, 1, 2, 2, 3].to_vec(), 2);
+    let expect = vec![1, 2];
+    assert_eq!(res.len(), expect.len());
+    for i in res {
+        assert!(expect.contains(&i));
+    }
+}
