@@ -43,3 +43,17 @@ fn max_envelopes() {
         5
     );
 }
+
+#[test]
+fn twitter() {
+    use super::five::Twitter;
+    let mut twitter = Twitter::new();
+    twitter.post_tweet(1, 5);
+    println!("{:?}", twitter.get_news_feed(1));
+
+    twitter.follow(1, 2);
+    twitter.post_tweet(2, 6);
+    println!("{:?}", twitter.get_news_feed(1));
+
+    twitter.unfollow(1, 2);
+}
