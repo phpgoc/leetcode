@@ -57,3 +57,9 @@ fn twitter() {
 
     twitter.unfollow(1, 2);
 }
+
+#[test]
+fn count_numbers_with_unique_digits() {
+    use super::seven;
+    assert_eq!(seven::count_numbers_with_unique_digits(2), 91);
+}
