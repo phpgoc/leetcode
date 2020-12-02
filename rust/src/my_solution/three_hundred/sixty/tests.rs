@@ -10,3 +10,12 @@ fn is_perfect_square() {
     use super::seven;
     assert!(seven::is_perfect_square(16));
 }
+
+#[test]
+fn largest_divisible_subset() {
+    use super::eight;
+    assert_eq!(
+        eight::largest_divisible_subset(vec![1, 2, 4, 8]),
+        vec![1, 2, 4, 8]
+    );
+}
