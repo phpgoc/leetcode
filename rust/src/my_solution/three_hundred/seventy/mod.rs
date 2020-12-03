@@ -1,3 +1,4 @@
+pub mod eight;
 pub mod five;
 pub mod seven;
 pub mod six;

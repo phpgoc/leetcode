@@ -54,3 +54,18 @@ fn combination_sum4() {
     use super::seven;
     assert_eq!(seven::combination_sum4(vec![1, 2, 3], 4), 7);
 }
+
+#[test]
+fn kth_smallest() {
+    use super::eight;
+    assert_eq!(
+        eight::kth_smallest(
+            vec![[1, 5, 9], [10, 11, 13], [12, 14, 15]]
+                .iter()
+                .map(|r| r.to_vec())
+                .collect::<Vec<_>>(),
+            8
+        ),
+        14
+    );
+}
