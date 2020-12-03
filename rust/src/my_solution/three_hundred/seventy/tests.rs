@@ -40,3 +40,12 @@ fn get_money_amount() {
     use super::five;
     assert_eq!(five::get_money_amount(10), 16);
 }
+#[test]
+fn wiggle_max_length() {
+    use super::six;
+    assert_eq!(
+        six::wiggle_max_length(vec![1, 17, 5, 10, 13, 15, 10, 5, 16, 8]),
+        7
+    );
+    assert_eq!(six::wiggle_max_length(vec![3, 3, 3, 2, 5]), 3);
+}
