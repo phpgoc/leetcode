@@ -35,3 +35,8 @@ fn k_smallest_pairs() {
         .collect::<Vec<_>>()
     );
 }
+#[test]
+fn get_money_amount() {
+    use super::five;
+    assert_eq!(five::get_money_amount(10), 16);
+}
