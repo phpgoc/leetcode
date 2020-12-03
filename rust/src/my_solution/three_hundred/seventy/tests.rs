@@ -49,3 +49,8 @@ fn wiggle_max_length() {
     );
     assert_eq!(six::wiggle_max_length(vec![3, 3, 3, 2, 5]), 3);
 }
+#[test]
+fn combination_sum4() {
+    use super::seven;
+    assert_eq!(seven::combination_sum4(vec![1, 2, 3], 4), 7);
+}

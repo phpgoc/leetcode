@@ -1,4 +1,5 @@
 pub mod five;
+pub mod seven;
 pub mod six;
 #[cfg(test)]
 mod tests;
