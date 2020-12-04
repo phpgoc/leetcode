@@ -45,5 +45,6 @@ impl RandomizedSet {
         *self.data.iter().nth(random).unwrap()
     }
 }
+pub mod one;
 #[cfg(test)]
 mod tests;
