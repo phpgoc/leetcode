@@ -16,3 +16,14 @@ fn randomized_collection() {
     assert!(!m.insert(2));
     println!("{:?}", m.get_random());
 }
+
+#[test]
+fn can_construct() {
+    use super::three;
+    assert!(three::can_construct("aa".to_string(), "aab".to_string()));
+    assert!(!three::can_construct("a".to_string(), "b".to_string()));
+    assert!(!three::can_construct(
+        "fihjjjjei".to_string(),
+        "hjibagacbhadfaefdjaeaebgi".to_string()
+    ));
+}
