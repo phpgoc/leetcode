@@ -27,3 +27,19 @@ fn can_construct() {
         "hjibagacbhadfaefdjaeaebgi".to_string()
     ));
 }
+
+#[test]
+fn solution() {
+    use super::four::Solution;
+    let m = Solution::new(vec![1, 2, 3, 4]);
+    let mut r = [0, 0, 0, 0];
+    for _ in 0..1000 {
+        let r1 = m.shuffle();
+        for i in 0..4 {
+            r[i] += r1[i];
+        }
+    }
+    println!("{:?}", r);
+
+    assert_eq!(m.reset(), vec![1, 2, 3, 4])
+}
