@@ -45,6 +45,7 @@ impl RandomizedSet {
         *self.data.iter().nth(random).unwrap()
     }
 }
+pub mod five;
 pub mod four;
 pub mod one;
 #[cfg(test)]

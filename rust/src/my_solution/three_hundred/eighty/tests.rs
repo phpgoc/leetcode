@@ -43,3 +43,9 @@ fn solution() {
 
     assert_eq!(m.reset(), vec![1, 2, 3, 4])
 }
+
+#[test]
+fn deserialize() {
+    use super::five;
+    println!("{:?}", five::deserialize("[123,[456,[789]]]".to_string()));
+}
