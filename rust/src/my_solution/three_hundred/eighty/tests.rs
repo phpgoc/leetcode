@@ -58,3 +58,9 @@ fn lexical_order() {
     );
     six::lexical_order(5000000);
 }
+
+#[test]
+fn first_uniq_char() {
+    use super::seven;
+    assert_eq!(seven::first_uniq_char(String::from("loveleetcode")), 2);
+}
