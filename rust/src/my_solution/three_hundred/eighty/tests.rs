@@ -64,3 +64,12 @@ fn first_uniq_char() {
     use super::seven;
     assert_eq!(seven::first_uniq_char(String::from("loveleetcode")), 2);
 }
+
+#[test]
+fn find_the_difference() {
+    use super::nine;
+    assert_eq!(
+        nine::find_the_difference(String::from("abcd"), String::from("abcde")),
+        'e'
+    );
+}
