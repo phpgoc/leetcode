@@ -5,6 +5,7 @@ pub mod forty;
 pub mod four;
 pub mod nine;
 pub mod nineteen;
+pub mod ninty;
 pub mod seven;
 pub mod seventy;
 pub mod six;
