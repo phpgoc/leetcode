@@ -16,3 +16,9 @@ fn is_subsequence() {
     ));
     assert!(two::is_subsequence(String::from("a"), String::from("a")));
 }
+#[test]
+fn valid_utf8() {
+    use super::three;
+    assert!(three::valid_utf8(vec![197, 130, 1]));
+    assert!(!three::valid_utf8(vec![235, 140, 4]));
+}
