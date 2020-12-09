@@ -38,3 +38,11 @@ fn decode_string() {
         String::from("accaccacc")
     );
 }
+#[test]
+fn longest_substring() {
+    use super::five;
+    assert_eq!(five::longest_substring(String::from("ababbc"), 2), 5);
+    assert_eq!(five::longest_substring(String::from("aaabb"), 3), 3);
+    assert_eq!(five::longest_substring(String::from("ababacb"), 3), 0);
+    assert_eq!(five::longest_substring(String::from("weitong"), 2), 0);
+}
