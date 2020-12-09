@@ -14,6 +14,7 @@ pub fn last_remaining(n: i32) -> i32 {
     }
 }
 
+pub mod four;
 #[cfg(test)]
 mod tests;
 pub mod three;

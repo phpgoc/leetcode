@@ -22,3 +22,19 @@ fn valid_utf8() {
     assert!(three::valid_utf8(vec![197, 130, 1]));
     assert!(!three::valid_utf8(vec![235, 140, 4]));
 }
+#[test]
+fn decode_string() {
+    use super::four;
+    assert_eq!(
+        four::decode_string(String::from("3[a]2[bc]")),
+        String::from("aaabcbc")
+    );
+    assert_eq!(
+        four::decode_string(String::from("abc3[cd]xyz")),
+        String::from("abccdcdcdxyz")
+    );
+    assert_eq!(
+        four::decode_string(String::from("3[a2[c]]")),
+        String::from("accaccacc")
+    );
+}
