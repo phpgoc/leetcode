@@ -14,6 +14,7 @@ pub fn last_remaining(n: i32) -> i32 {
     }
 }
 
+pub mod eight;
 pub mod five;
 pub mod four;
 pub mod seven;

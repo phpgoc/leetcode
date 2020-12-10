@@ -52,3 +52,11 @@ fn integer_replacement() {
     assert_eq!(seven::integer_replacement(8), 3);
     assert_eq!(seven::integer_replacement(7), 4);
 }
+#[test]
+fn solution() {
+    use super::eight::Solution;
+    let m = Solution::new(vec![1, 2, 3, 3, 3]);
+    assert_eq!(m.pick(1), 0);
+    let r = m.pick(3);
+    assert!([2, 3, 4].contains(&r));
+}
