@@ -1,6 +1,7 @@
 pub mod eighty;
 pub mod fifty;
 pub mod forty;
+pub mod four_hundred;
 pub mod nine_hundred;
 pub mod ninety;
 pub mod one_hundred_eighty;
