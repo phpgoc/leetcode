@@ -46,3 +46,9 @@ fn longest_substring() {
     assert_eq!(five::longest_substring(String::from("ababacb"), 3), 0);
     assert_eq!(five::longest_substring(String::from("weitong"), 2), 0);
 }
+#[test]
+fn integer_replacement() {
+    use super::seven;
+    assert_eq!(seven::integer_replacement(8), 3);
+    assert_eq!(seven::integer_replacement(7), 4);
+}
