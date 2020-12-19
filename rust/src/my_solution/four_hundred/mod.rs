@@ -24,3 +24,4 @@ pub fn find_nth_digit(n: i32) -> i32 {
 pub mod one;
 #[cfg(test)]
 mod tests;
+pub mod two;
