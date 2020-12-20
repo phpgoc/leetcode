@@ -69,3 +69,19 @@ fn to_hex() {
     assert_eq!(five::to_hex(26), String::from("1a"));
     assert_eq!(five::to_hex(-1), String::from("ffffffff"));
 }
+#[test]
+fn reconstruct_queue() {
+    use super::six;
+    assert_eq!(
+        six::reconstruct_queue(
+            [[7, 0], [4, 4], [7, 1], [5, 0], [6, 1], [5, 2]]
+                .iter()
+                .map(|r| r.to_vec())
+                .collect::<Vec<_>>()
+        ),
+        [[5, 0], [7, 0], [5, 2], [6, 1], [4, 4], [7, 1]]
+            .iter()
+            .map(|r| r.to_vec())
+            .collect::<Vec<_>>()
+    )
+}
