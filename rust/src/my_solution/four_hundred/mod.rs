@@ -25,6 +25,7 @@ pub mod five;
 pub mod nine;
 pub mod one;
 pub mod six;
+pub mod ten;
 #[cfg(test)]
 mod tests;
 pub mod two;

@@ -90,3 +90,8 @@ fn longest_palindrome() {
     use super::nine;
     assert_eq!(nine::longest_palindrome(String::from("abccccdd")), 7);
 }
+#[test]
+fn split_array() {
+    use super::ten;
+    assert_eq!(ten::split_array(vec![7, 2, 5, 10, 8], 2), 18);
+}
