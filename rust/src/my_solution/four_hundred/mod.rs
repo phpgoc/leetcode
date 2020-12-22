@@ -28,5 +28,6 @@ pub mod six;
 pub mod ten;
 #[cfg(test)]
 mod tests;
+pub mod thirty;
 pub mod twelve;
 pub mod two;

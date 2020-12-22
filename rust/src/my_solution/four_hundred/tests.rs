@@ -109,3 +109,14 @@ fn fizz_buzz() {
         .collect::<Vec<_>>()
     )
 }
+#[test]
+fn number_of_arithmetic_slices() {
+    use super::thirty;
+    assert_eq!(thirty::number_of_arithmetic_slices(vec![1, 2, 3, 4, 6]), 3);
+    assert_eq!(
+        thirty::number_of_arithmetic_slices(vec![
+            1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+        ]),
+        120
+    );
+}
