@@ -22,6 +22,7 @@ pub fn find_nth_digit(n: i32) -> i32 {
     }
 }
 pub mod five;
+pub mod nine;
 pub mod one;
 pub mod six;
 #[cfg(test)]

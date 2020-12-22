@@ -85,3 +85,8 @@ fn reconstruct_queue() {
             .collect::<Vec<_>>()
     )
 }
+#[test]
+fn longest_palindrome() {
+    use super::nine;
+    assert_eq!(nine::longest_palindrome(String::from("abccccdd")), 7);
+}
