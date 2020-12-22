@@ -95,3 +95,17 @@ fn split_array() {
     use super::ten;
     assert_eq!(ten::split_array(vec![7, 2, 5, 10, 8], 2), 18);
 }
+#[test]
+fn fizz_buzz() {
+    use super::twelve;
+    assert_eq!(
+        twelve::fizz_buzz(15),
+        [
+            "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13",
+            "14", "FizzBuzz"
+        ]
+        .iter()
+        .map(|r| r.to_string())
+        .collect::<Vec<_>>()
+    )
+}
