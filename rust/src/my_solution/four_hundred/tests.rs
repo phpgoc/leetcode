@@ -120,3 +120,10 @@ fn number_of_arithmetic_slices() {
         120
     );
 }
+#[test]
+fn third_max() {
+    use super::fourteen;
+    assert_eq!(fourteen::third_max(vec![1, 2, 3]), 1);
+    assert_eq!(fourteen::third_max(vec![1, 2, 2, 5, 3, 5, 1]), 2);
+    assert_eq!(fourteen::third_max(vec![1, 2, -2147483648]), -2147483648);
+}
