@@ -127,3 +127,11 @@ fn third_max() {
     assert_eq!(fourteen::third_max(vec![1, 2, 2, 5, 3, 5, 1]), 2);
     assert_eq!(fourteen::third_max(vec![1, 2, -2147483648]), -2147483648);
 }
+#[test]
+fn add_strings() {
+    use super::fifty;
+    assert_eq!(
+        fifty::add_strings(String::from("19"), String::from("81")),
+        String::from("100")
+    );
+}
