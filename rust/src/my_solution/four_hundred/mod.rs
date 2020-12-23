@@ -21,15 +21,16 @@ pub fn find_nth_digit(n: i32) -> i32 {
         }
     }
 }
-pub mod fifty;
+pub mod fifteen;
 pub mod five;
 pub mod fourteen;
 pub mod nine;
 pub mod one;
 pub mod six;
+pub mod sixteen;
 pub mod ten;
 #[cfg(test)]
 mod tests;
-pub mod thirty;
+pub mod thirteen;
 pub mod twelve;
 pub mod two;
