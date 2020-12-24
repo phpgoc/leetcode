@@ -178,3 +178,33 @@ fn can_partition() {
         99, 97
     ]));
 }
+#[test]
+fn pacific_atlantic() {
+    use super::seventeen;
+    let input = vec![
+        vec![1, 2, 2, 3, 5],
+        vec![3, 2, 3, 4, 4],
+        vec![2, 4, 5, 3, 1],
+        vec![6, 7, 1, 4, 5],
+        vec![5, 1, 1, 2, 4],
+    ];
+    let expect = [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]
+        .iter()
+        .map(|r| r.to_vec())
+        .collect::<Vec<_>>();
+    let result = seventeen::pacific_atlantic(input);
+    assert_eq!(result.len(), expect.len());
+    for i in expect {
+        assert!(result.contains(&i));
+    }
+    let input = vec![vec![1, 1, 1], vec![1, 1, 1]];
+    let expect = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2]]
+        .iter()
+        .map(|r| r.to_vec())
+        .collect::<Vec<_>>();
+    let result = seventeen::pacific_atlantic(input);
+    assert_eq!(result.len(), expect.len());
+    for i in expect {
+        assert!(result.contains(&i));
+    }
+}
