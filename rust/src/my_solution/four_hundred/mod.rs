@@ -25,6 +25,7 @@ pub mod fifteen;
 pub mod five;
 pub mod fourteen;
 pub mod nine;
+pub mod nineteen;
 pub mod one;
 pub mod seventeen;
 pub mod six;

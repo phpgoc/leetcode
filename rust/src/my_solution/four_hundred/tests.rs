@@ -208,3 +208,16 @@ fn pacific_atlantic() {
         assert!(result.contains(&i));
     }
 }
+
+#[test]
+fn count_battleships() {
+    use super::nineteen;
+    assert_eq!(
+        nineteen::count_battleships(vec![
+            vec!['X', '.', '.', 'X'],
+            vec!['.', '.', '.', 'X'],
+            vec!['.', '.', '.', 'X']
+        ]),
+        2
+    );
+}
