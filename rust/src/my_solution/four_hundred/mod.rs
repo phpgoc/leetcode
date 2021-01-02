@@ -37,3 +37,4 @@ pub mod thirteen;
 pub mod twelve;
 pub mod twenty;
 pub mod two;
+pub mod thirty;
