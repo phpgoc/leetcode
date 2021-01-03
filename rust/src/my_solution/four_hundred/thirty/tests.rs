@@ -24,3 +24,11 @@ fn min_mutation() {
         1
     );
 }
+#[test]
+fn count_segments() {
+    use super::four;
+    assert_eq!(
+        four::count_segments(String::from("Hello, my name is John")),
+        5
+    );
+}
