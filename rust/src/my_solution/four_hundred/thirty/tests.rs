@@ -250,3 +250,11 @@ fn erase_overlap_intervals() {
         187
     );
 }
+#[test]
+fn find_right_interval() {
+    use super::six;
+    assert_eq!(
+        six::find_right_interval(vec![vec![3, 4], vec![2, 3], vec![1, 2]]),
+        vec![-1, 0, 1]
+    );
+}
