@@ -25,3 +25,16 @@ fn find_duplicates() {
         assert!(expect.contains(&i));
     }
 }
+#[test]
+fn compress() {
+    use super::three;
+    let mut input = ['a', 'a', 'b', 'b', 'c', 'c', 'c'].to_vec();
+    assert_eq!(three::compress(&mut input), 6);
+    println!("{:?}", input);
+    let mut input = [
+        'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b',
+    ]
+    .to_vec();
+    assert_eq!(three::compress(&mut input), 4);
+    println!("{:?}", input);
+}
