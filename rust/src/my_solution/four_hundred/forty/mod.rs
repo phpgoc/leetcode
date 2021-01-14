@@ -4,6 +4,7 @@ mod tests;
 pub fn find_kth_number(n: i32, k: i32) -> i32 {
     n + k
 }
+pub mod eight;
 pub mod one;
 pub mod three;
 pub mod two;

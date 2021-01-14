@@ -38,3 +38,13 @@ fn compress() {
     assert_eq!(three::compress(&mut input), 4);
     println!("{:?}", input);
 }
+#[test]
+fn find_disappeared_numbers() {
+    use super::eight;
+    let res = eight::find_disappeared_numbers(vec![4, 3, 2, 7, 8, 2, 3, 1]);
+    let expect = vec![5, 6];
+    assert_eq!(res.len(), expect.len());
+    for i in res {
+        assert!(expect.contains(&i));
+    }
+}
