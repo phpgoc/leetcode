@@ -29,3 +29,10 @@ fn find_content_children() {
     assert_eq!(five::find_content_children(vec![1, 2, 3], vec![1, 1]), 1);
     assert_eq!(five::find_content_children(vec![1, 2, 3], vec![1, 2]), 2);
 }
+#[test]
+fn find132pattern() {
+    use super::six;
+    assert!(six::find132pattern(vec![1, 3, 2]));
+    assert!(!six::find132pattern(vec![1, 2, 3]));
+    assert!(six::find132pattern(vec![3, 5, 0, 3, 4]));
+}
