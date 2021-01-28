@@ -36,3 +36,8 @@ fn find132pattern() {
     assert!(!six::find132pattern(vec![1, 2, 3]));
     assert!(six::find132pattern(vec![3, 5, 0, 3, 4]));
 }
+#[test]
+fn circular_array_loop() {
+    use super::seven;
+    assert!(seven::circular_array_loop(vec![2, -1, 1, 2, 2]));
+}
