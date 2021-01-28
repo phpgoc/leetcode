@@ -41,3 +41,9 @@ fn circular_array_loop() {
     use super::seven;
     assert!(seven::circular_array_loop(vec![2, -1, 1, 2, 2]));
 }
+#[test]
+fn repeated_substring_pattern() {
+    use super::nine;
+    assert!(nine::repeated_substring_pattern(String::from("abab")));
+    assert!(!nine::repeated_substring_pattern(String::from("aabab")));
+}
