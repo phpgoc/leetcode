@@ -15,3 +15,11 @@ fn min_moves() {
         487
     );
 }
+#[test]
+fn four_sum_count() {
+    use super::four;
+    assert_eq!(
+        four::four_sum_count(vec![1, 2], vec![-2, -1], vec![-1, 2], vec![0, 2]),
+        2
+    );
+}
