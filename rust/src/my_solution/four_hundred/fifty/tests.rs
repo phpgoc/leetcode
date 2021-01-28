@@ -23,3 +23,9 @@ fn four_sum_count() {
         2
     );
 }
+#[test]
+fn find_content_children() {
+    use super::five;
+    assert_eq!(five::find_content_children(vec![1, 2, 3], vec![1, 1]), 1);
+    assert_eq!(five::find_content_children(vec![1, 2, 3], vec![1, 2]), 2);
+}
