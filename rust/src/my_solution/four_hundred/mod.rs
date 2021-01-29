@@ -32,6 +32,7 @@ pub mod one;
 pub mod seventeen;
 pub mod six;
 pub mod sixteen;
+pub mod sixty;
 pub mod ten;
 #[cfg(test)]
 mod tests;
