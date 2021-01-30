@@ -21,3 +21,12 @@ fn min_moves2() {
     assert_eq!(two::min_moves2(vec![1, 2, 2, 3]), 2);
     assert_eq!(two::min_moves2(vec![1, 0, 0, 8, 6]), 14);
 }
+#[test]
+fn island_perimeter() {
+    use super::three;
+    let grid = [[0, 1, 0, 0], [1, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]]
+        .iter()
+        .map(|r| r.to_vec())
+        .collect::<Vec<_>>();
+    assert_eq!(three::island_perimeter(grid), 16);
+}

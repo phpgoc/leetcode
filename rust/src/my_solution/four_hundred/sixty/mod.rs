@@ -111,4 +111,5 @@ impl LFUCache {
 pub mod one;
 #[cfg(test)]
 mod tests;
+pub mod three;
 pub mod two;
