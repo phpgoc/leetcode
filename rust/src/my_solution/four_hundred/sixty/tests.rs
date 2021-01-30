@@ -14,3 +14,10 @@ fn hamming_distance() {
     assert_eq!(one::hamming_distance(1, 4), 2);
     assert_eq!(one::hamming_distance(1, 5), 1);
 }
+#[test]
+fn min_moves2() {
+    use super::two;
+    assert_eq!(two::min_moves2(vec![1, 2, 3]), 2);
+    assert_eq!(two::min_moves2(vec![1, 2, 2, 3]), 2);
+    assert_eq!(two::min_moves2(vec![1, 0, 0, 8, 6]), 14);
+}
