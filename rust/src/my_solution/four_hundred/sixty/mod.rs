@@ -108,5 +108,6 @@ impl LFUCache {
         }
     }
 }
+pub mod one;
 #[cfg(test)]
 mod tests;
