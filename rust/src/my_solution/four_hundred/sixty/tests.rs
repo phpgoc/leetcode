@@ -30,3 +30,8 @@ fn island_perimeter() {
         .collect::<Vec<_>>();
     assert_eq!(three::island_perimeter(grid), 16);
 }
+#[test]
+fn can_i_win() {
+    use super::four;
+    assert!(!four::can_i_win(10, 11));
+}
