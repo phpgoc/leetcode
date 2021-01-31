@@ -35,3 +35,15 @@ fn can_i_win() {
     use super::four;
     assert!(!four::can_i_win(10, 11));
 }
+#[test]
+fn find_substring_in_wrapround_string() {
+    use super::seven;
+    assert_eq!(
+        seven::find_substring_in_wrapround_string(String::from("cdefghefghijklmnopqrstuvwxmnijklmnopqrstuvbcdefghijklmnopqrstuvwabcddefghijklfghijklmabcdefghijklmnopqrstuvwxymnopqrstuvwxyz")),
+        339
+    );
+    assert_eq!(
+        seven::find_substring_in_wrapround_string(String::from("zabd")),
+        7
+    );
+}
