@@ -24,3 +24,4 @@ pub fn rand7() -> i32 {
 }
 #[cfg(test)]
 mod tests;
+pub mod two;
