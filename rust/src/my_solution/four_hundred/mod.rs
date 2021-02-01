@@ -30,6 +30,7 @@ pub mod nine;
 pub mod nineteen;
 pub mod one;
 pub mod seventeen;
+pub mod seventy;
 pub mod six;
 pub mod sixteen;
 pub mod sixty;
