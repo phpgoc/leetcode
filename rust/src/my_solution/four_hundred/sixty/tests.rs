@@ -47,3 +47,23 @@ fn find_substring_in_wrapround_string() {
         7
     );
 }
+#[test]
+fn valid_ip_address() {
+    use super::eight;
+    assert_eq!(
+        eight::valid_ip_address(String::from("172.16.254.1")),
+        String::from("IPv4")
+    );
+    assert_eq!(
+        eight::valid_ip_address(String::from("2001:0db8:85a3:0:0:8A2E:0370:7334")),
+        String::from("IPv6")
+    );
+    assert_eq!(
+        eight::valid_ip_address(String::from("256.256.256.256")),
+        String::from("Neither")
+    );
+    assert_eq!(
+        eight::valid_ip_address(String::from("2001:0db8:85a3:0:0:8A2E:0370:7334:")),
+        String::from("Neither")
+    );
+}
