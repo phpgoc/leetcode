@@ -2331,3 +2331,9 @@ fn find_all_concatenated_words_in_a_dict() {
         assert!(res.contains(&i));
     }
 }
+#[test]
+fn makesquare() {
+    use super::three;
+    assert!(three::makesquare(vec![1, 1, 2, 2, 2]));
+    assert!(!three::makesquare(vec![3, 3, 3, 3, 4]));
+}
