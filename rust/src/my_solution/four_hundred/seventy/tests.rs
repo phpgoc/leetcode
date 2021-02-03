@@ -2337,3 +2337,9 @@ fn makesquare() {
     assert!(three::makesquare(vec![1, 1, 2, 2, 2]));
     assert!(!three::makesquare(vec![3, 3, 3, 3, 4]));
 }
+#[test]
+fn find_radius() {
+    use super::five;
+    assert_eq!(five::find_radius(vec![1, 2, 3], vec![2]), 1);
+    assert_eq!(five::find_radius(vec![1, 2, 3, 4], vec![2]), 2);
+}
