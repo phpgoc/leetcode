@@ -2343,3 +2343,10 @@ fn find_radius() {
     assert_eq!(five::find_radius(vec![1, 2, 3], vec![2]), 1);
     assert_eq!(five::find_radius(vec![1, 2, 3, 4], vec![2]), 2);
 }
+#[test]
+fn find_complement() {
+    use super::six;
+    assert_eq!(six::find_complement(5), 2);
+    assert_eq!(six::find_complement(1), 0);
+    assert_eq!(six::find_complement(8), 7);
+}
