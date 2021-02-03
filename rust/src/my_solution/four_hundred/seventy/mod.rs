@@ -23,6 +23,7 @@ pub fn rand7() -> i32 {
     rng.gen_range(1, 8)
 }
 pub mod five;
+pub mod seven;
 pub mod six;
 #[cfg(test)]
 mod tests;

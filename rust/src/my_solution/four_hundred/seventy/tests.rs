@@ -2350,3 +2350,9 @@ fn find_complement() {
     assert_eq!(six::find_complement(1), 0);
     assert_eq!(six::find_complement(8), 7);
 }
+#[test]
+fn total_hamming_distance() {
+    use super::seven;
+    assert_eq!(seven::total_hamming_distance(vec![4, 14, 2]), 6);
+    assert_eq!(seven::total_hamming_distance(vec![6, 1, 8, 6, 8]), 22);
+}
