@@ -22,6 +22,7 @@ pub fn rand7() -> i32 {
     let mut rng = thread_rng();
     rng.gen_range(1, 8)
 }
+pub mod eight;
 pub mod five;
 pub mod seven;
 pub mod six;

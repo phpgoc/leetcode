@@ -2356,3 +2356,9 @@ fn total_hamming_distance() {
     assert_eq!(seven::total_hamming_distance(vec![4, 14, 2]), 6);
     assert_eq!(seven::total_hamming_distance(vec![6, 1, 8, 6, 8]), 22);
 }
+#[test]
+fn rand_point() {
+    use super::eight::*;
+    let mut m = Solution::new(5.0, 0.0, 0.0);
+    println!("{:?}", m.rand_point());
+}
